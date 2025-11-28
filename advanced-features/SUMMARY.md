@@ -4,29 +4,20 @@
 
 * [Advanced Features](README.md)
 
-## Membership Tiers
+## Tier Monetization
 
-* [Creating Membership Tiers](membership-tiers/create.md)
-* [Editing Existing Tiers](membership-tiers/edit.md)
-* [Deleting Tiers](membership-tiers/delete.md)
-* [Best Practices](membership-tiers/best-practice.md)
-* [Mistakes to Avoid](membership-tiers/mistake.md)
+* [Tier Products](tier-products.md)
+* [Tier Subscriptions](tier-subscriptions.md)
 
-## Customers Management
+## Storefront Integration
 
-* [Customers Page](customers-management/customers-page.md)
-* [Customer Details](customers-management/customer-details.md)
-* [Manually Assign Tiers](customers-management/manually-assign-tiers.md)
-* [Manually Edit Store Credits](customers-management/manually-edit-store-credits.md)
+* [Customer Widget](customer-widget.md)
 
-## Orders & Cashback
+## Automation
 
-* [Orders Page](orders-and-cashback/orders-page.md)
-* [Cashback Processing](orders-and-cashback/cashback-processing.md)
-* [Cashback Calculation Rules](orders-and-cashback/cashback-calculation-rules.md)
+* [Tier Automation](tier-automation.md)
 
-## Store Credit
+## Integration
 
-* [Access Store Credits](store-credit/access-store-credits.md)
-* [Refund to Credit](store-credit/refund-to-credit.md)
-* [Expiration Dates](store-credit/expiration-dates.md)
+* [Webhooks](webhooks.md)
+* [Multi-Currency](multi-currency.md)

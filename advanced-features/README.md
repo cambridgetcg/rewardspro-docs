@@ -1,55 +1,125 @@
 ---
 icon: sparkles
-description: Detailed guides for all RewardsPro features
+description: Advanced features for power users and growing businesses
 ---
 
 # Advanced Features
 
-Comprehensive documentation for managing your loyalty program. Find step-by-step guides, best practices, and troubleshooting help.
-
-## Quickstart Checklist
-
-Before diving into advanced features, ensure your basic setup is complete:
-
-- [ ] **Membership Tiers configured**
-- [ ] **Customers synced from Shopify**
-- [ ] **Orders synced (if applicable)**
-- [ ] **Automatic cashback processing enabled**
-- [ ] **Customer widget tested**
-- [ ] **Store credit payment working**
-- [ ] **Test order completed successfully**
-
-## Feature Guides
-
-### Membership Tiers
-Create and manage your loyalty tier structure:
-- [Creating Membership Tiers](membership-tiers/create.md)
-- [Editing Existing Tiers](membership-tiers/edit.md)
-- [Deleting Tiers](membership-tiers/delete.md)
-- [Best Practices](membership-tiers/best-practice.md)
-- [Mistakes to Avoid](membership-tiers/mistake.md)
-
-### Customers Management
-Manage customer profiles and tier assignments:
-- [Customers Page](customers-management/customers-page.md)
-- [Customer Details](customers-management/customer-details.md)
-- [Manually Assign Tiers](customers-management/manually-assign-tiers.md)
-- [Manually Edit Store Credits](customers-management/manually-edit-store-credits.md)
-
-### Orders & Cashback
-Process orders and manage cashback:
-- [Orders Page](orders-and-cashback/orders-page.md)
-- [Cashback Processing](orders-and-cashback/cashback-processing.md)
-- [Cashback Calculation Rules](orders-and-cashback/cashback-calculation-rules.md)
-
-### Store Credit
-Manage store credit balances:
-- [Access Store Credits](store-credit/access-store-credits.md)
-- [Refund to Credit](store-credit/refund-to-credit.md)
-- [Expiration Dates](store-credit/expiration-dates.md)
+Take your loyalty program to the next level with advanced features like tier subscriptions, automation, marketing tools, and deep integrations.
 
 ---
 
+## Feature Overview
+
+<table data-view="cards">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th data-hidden data-card-target data-type="content-ref"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier Products</strong></td>
+<td>Sell tier memberships as Shopify products</td>
+<td><a href="tier-products.md">tier-products.md</a></td>
+</tr>
+<tr>
+<td><strong>Tier Subscriptions</strong></td>
+<td>Recurring tier membership billing</td>
+<td><a href="tier-subscriptions.md">tier-subscriptions.md</a></td>
+</tr>
+<tr>
+<td><strong>Customer Widget</strong></td>
+<td>Storefront loyalty widget customization</td>
+<td><a href="customer-widget.md">customer-widget.md</a></td>
+</tr>
+<tr>
+<td><strong>Tier Automation</strong></td>
+<td>Automatic tier calculation and upgrades</td>
+<td><a href="tier-automation.md">tier-automation.md</a></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+## When to Use Advanced Features
+
+| Feature | Use Case |
+|---------|----------|
+| **Tier Products** | Monetize VIP tiers, sell premium memberships |
+| **Tier Subscriptions** | Recurring membership revenue, subscription boxes |
+| **Customer Widget** | Display loyalty status on your storefront |
+| **Tier Automation** | Hands-off tier management at scale |
+| **Multi-Currency** | International stores with multiple currencies |
+| **Webhooks** | Build custom integrations with your systems |
+
+---
+
+## Quick Reference
+
+### Tier Products & Subscriptions
+
+| Guide | What You'll Learn |
+|-------|-------------------|
+| [Tier Products](tier-products.md) | Create purchasable tier memberships |
+| [Tier Subscriptions](tier-subscriptions.md) | Set up recurring tier billing |
+| [Pricing Strategies](pricing-strategies.md) | Optimize subscription pricing |
+
+### Storefront Integration
+
+| Guide | What You'll Learn |
+|-------|-------------------|
+| [Customer Widget](customer-widget.md) | Configure the loyalty widget |
+| [Widget Customization](widget-customization.md) | Style and brand the widget |
+| [Customer Account](customer-account.md) | Customer account page integration |
+
+### Automation & Integration
+
+| Guide | What You'll Learn |
+|-------|-------------------|
+| [Tier Automation](tier-automation.md) | Configure automatic tier recalculation |
+| [Webhooks](webhooks.md) | Integrate with external systems |
+| [Multi-Currency](multi-currency.md) | Handle international currencies |
+
+---
+
+## Feature Availability by Plan
+
+| Feature | Free | Starter | Growth | Enterprise |
+|---------|------|---------|--------|------------|
+| Basic Tiers | ✅ | ✅ | ✅ | ✅ |
+| Customer Widget | ✅ | ✅ | ✅ | ✅ |
+| Tier Automation | ❌ | ✅ | ✅ | ✅ |
+| Tier Products | ❌ | ✅ | ✅ | ✅ |
+| Tier Subscriptions | ❌ | ❌ | ✅ | ✅ |
+| Advanced Analytics | ❌ | ❌ | ✅ | ✅ |
+| Multi-Currency | ❌ | ❌ | ✅ | ✅ |
+| API Access | ❌ | ❌ | ❌ | ✅ |
+
+---
+
+## Prerequisites
+
+Before using advanced features, ensure:
+
+- [ ] Basic tier structure is set up
+- [ ] Customers are synced from Shopify
+- [ ] Orders are syncing correctly
+- [ ] Test order completed successfully
+- [ ] Widget is enabled (if using)
+
 {% hint style="info" %}
-Use the sidebar navigation to browse all topics, or search for specific terms.
+**Need help with basics?** Start with [Getting Started](../getting-started/) or [Core Features](../core-features/).
 {% endhint %}
+
+---
+
+## Next Steps
+
+- **Monetize your tiers**: [Tier Products Guide](tier-products.md)
+- **Add recurring revenue**: [Tier Subscriptions Guide](tier-subscriptions.md)
+- **Display loyalty status**: [Customer Widget Guide](customer-widget.md)
+- **Automate tier management**: [Tier Automation Guide](tier-automation.md)
