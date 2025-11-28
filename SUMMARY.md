@@ -16,4 +16,7 @@
 
 ## Customer Portal
 
-* [Page 3](customer-portal/page-3.md)
+* [Overview](customer-portal/page-3.md)
+* [Widget Installation](customer-portal/widget-installation.md)
+* [Widget Customization](customer-portal/widget-customization.md)
+* [Account Integration](customer-portal/account-integration.md)
