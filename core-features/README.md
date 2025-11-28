@@ -1,61 +1,65 @@
 ---
-icon: cube
-description: Overview of RewardsPro's main features
+icon: bolt
 ---
 
-# Core Features
+# Quickstart Checklist
 
-RewardsPro provides a complete loyalty and rewards system for your Shopify store. This section covers the main features at a high level.
+Get RewardsPro up and running with this step-by-step checklist.
+
+## Setup Checklist
+
+* [ ] **Setup Membership Tiers** - Create your loyalty tiers with cashback rates
+* [ ] **Customers synced from Shopify** - Import existing customer data
+* [ ] **Orders synced (if applicable)** - Import historical orders for accurate tier placement
+* [ ] **Automatic cashback processing configured** - Enable automatic rewards
+* [ ] **Customer account widget tested (if enabled)** - Verify the storefront widget works
+* [ ] **Store credit payment method working** - Test credit redemption at checkout
+* [ ] **Test order placed and cashback issued correctly** - Confirm end-to-end flow
+
+---
+
+## Quick Links
+
+| Task | Guide |
+|------|-------|
+| Create your first tier | [Creating Membership Tiers](membership-tiers/create.md) |
+| View customer list | [Customers Page](customers-management/customers-page.md) |
+| Understand cashback | [Cashback Calculation Rules](orders-and-cashback/cashback-calculation-rules.md) |
+| Manage store credit | [Access Store Credits](store-credit/access-store-credits.md) |
+
+---
 
 ## Feature Overview
 
-<table data-view="cards">
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th data-hidden data-card-target data-type="content-ref"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Membership Tiers</strong></td>
-<td>Create tiered loyalty programs with increasing benefits</td>
-<td><a href="membership-tiers.md">membership-tiers.md</a></td>
-</tr>
-<tr>
-<td><strong>Customers</strong></td>
-<td>Manage customer profiles, tiers, and store credit</td>
-<td><a href="customers.md">customers.md</a></td>
-</tr>
-<tr>
-<td><strong>Orders & Cashback</strong></td>
-<td>Automatic cashback calculation and processing</td>
-<td><a href="orders-cashback.md">orders-cashback.md</a></td>
-</tr>
-<tr>
-<td><strong>Store Credit</strong></td>
-<td>Issue, track, and manage store credit balances</td>
-<td><a href="store-credit.md">store-credit.md</a></td>
-</tr>
-<tr>
-<td><strong>Analytics</strong></td>
-<td>Track program performance and customer behavior</td>
-<td><a href="analytics.md">analytics.md</a></td>
-</tr>
-</tbody>
-</table>
+### Membership Tiers
 
-## How It Works
+Create tiered loyalty programs with increasing cashback rates. Customers automatically progress through tiers based on their spending.
 
-1. **Set Up Tiers** - Create membership levels with different cashback rates
-2. **Sync Customers** - Import your existing customers from Shopify
-3. **Process Orders** - Cashback is calculated automatically on paid orders
-4. **Reward Customers** - Store credit is added to customer accounts
-5. **Track Performance** - Monitor your loyalty program's impact
+- [Creating Tiers](membership-tiers/create.md)
+- [Best Practices](membership-tiers/best-practice.md)
+- [Common Mistakes](membership-tiers/mistake.md)
 
----
+### Customer Management
 
-{% hint style="info" %}
-For detailed step-by-step guides, visit the **Advanced Features** section.
-{% endhint %}
+View and manage all your loyalty program members. Manually adjust tiers and store credit when needed.
+
+- [Customers Page](customers-management/customers-page.md)
+- [Customer Details](customers-management/customer-details.md)
+- [Manual Tier Assignment](customers-management/manually-assign-tiers.md)
+
+### Orders & Cashback
+
+Automatic cashback processing for all paid orders. Full control over calculation rules and exclusions.
+
+- [Orders Page](orders-and-cashback/orders-page.md)
+- [Cashback Processing](orders-and-cashback/cashback-processing.md)
+- [Calculation Rules](orders-and-cashback/cashback-calculation-rules.md)
+
+### Store Credit
+
+Issue, track, and manage store credit balances. Support for refunds to credit and expiration dates.
+
+- [Access Store Credits](store-credit/access-store-credits.md)
+- [Refund to Credit](store-credit/refund-to-credit.md)
+- [Expiration Dates](store-credit/expiration-dates.md)
+
