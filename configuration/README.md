@@ -1,11 +1,11 @@
 ---
 icon: gear
-description: Configure RewardsPro settings for your store
+description: Configure RewardsPro settings to match your business needs
 ---
 
 # Configuration
 
-Customize RewardsPro to match your business needs. This section covers all available settings and configuration options.
+Customize RewardsPro to optimize your loyalty program. This section covers all essential settings for running a successful rewards program.
 
 ## Quick Links
 
@@ -20,47 +20,43 @@ Customize RewardsPro to match your business needs. This section covers all avail
 <tbody>
 <tr>
 <td><strong>Store Settings</strong></td>
-<td>Currency, timezone, and general preferences</td>
+<td>Currency, timezone, and store information</td>
 <td><a href="store-settings.md">store-settings.md</a></td>
 </tr>
 <tr>
-<td><strong>Cashback Settings</strong></td>
-<td>Processing mode and calculation rules</td>
-<td><a href="cashback-settings.md">cashback-settings.md</a></td>
+<td><strong>Business Metrics</strong></td>
+<td>Configure ROI calculations and analytics</td>
+<td><a href="business-metrics.md">business-metrics.md</a></td>
 </tr>
 <tr>
-<td><strong>Widget Settings</strong></td>
-<td>Customer portal widget customization</td>
-<td><a href="widget-settings.md">widget-settings.md</a></td>
+<td><strong>Tier Automation</strong></td>
+<td>Automatic tier recalculation settings</td>
+<td><a href="tier-automation.md">tier-automation.md</a></td>
+</tr>
+<tr>
+<td><strong>Data Sync</strong></td>
+<td>Order and customer sync options</td>
+<td><a href="data-sync.md">data-sync.md</a></td>
 </tr>
 </tbody>
 </table>
 
-## Overview
+## Configuration Overview
 
-### Store Settings
+### Essential Setup (Do First)
 
-Configure your store's basic information:
-- **Currency**: Set your store's primary currency for displaying store credit
-- **Timezone**: Ensure reports and timestamps match your location
-- **Business preferences**: Customize behavior to match your workflow
+1. **Currency Settings** - Set your store currency and display format
+2. **Business Metrics** - Configure profit margins for accurate ROI tracking
+3. **Tier Automation** - Enable automatic tier updates
 
-### Cashback Settings
+### Advanced Configuration
 
-Control how cashback is processed:
-- **Automatic vs Manual mode**: Choose instant or reviewed processing
-- **Calculation rules**: Configure what's included in cashback calculations
-- **Exclusions**: Set up product or category exclusions
-
-### Widget Settings
-
-Customize the customer-facing experience:
-- **Display options**: Show/hide various elements
-- **Styling**: Match your store's branding
-- **Language**: Multi-language support
+4. **Data Sync** - Import historical orders for accurate tier calculations
+5. **Widget Settings** - Customize the customer-facing widget
+6. **Email Settings** - Configure branded emails (Max & Ultra plans)
 
 ---
 
 {% hint style="info" %}
-**Need help?** Use the **Ask** button in the top right to get AI-powered answers from our documentation.
+**Tip**: Complete the essential setup first, then fine-tune advanced settings as needed.
 {% endhint %}
