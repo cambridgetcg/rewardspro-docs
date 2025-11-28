@@ -1,42 +1,200 @@
 ---
-description: >-
-  Click on the targeted customers in Customers Page to access Customer Details
-  Module
+description: View complete customer information and manage their loyalty account
 ---
 
 # Customer Details
 
-## Overview
+Click on any customer in the Customers Page to open the Customer Details modal with comprehensive information and management tools.
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/Screenshot 2025-11-19 at 16.21.25.png" alt=""><figcaption></figcaption></figure></div>
+## Overview Tab
 
-* **Customer Information card**: shows name/email, Shopify customer ID, live store credit balance with currency formatting, and the created/updated timestamps so agents can quickly validate recency before acting.
-* **Tier Details card**: when a tier exists, the overview includes a secondary card outlining cashback rate, minimum spend, and evaluation period to help teams justify overrides or explain benefits on a call.
+<figure><img src="../.gitbook/assets/Screenshot 2025-11-19 at 16.21.25.png" alt="Customer Details Overview showing information and tier cards"><figcaption>Customer Overview with key information at a glance</figcaption></figure>
 
-***
+### Customer Information Card
 
-## Store Credit
+Displays essential customer data:
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/Store Credit.png" alt=""><figcaption></figcaption></figure></div>
+| Field | Description |
+|-------|-------------|
+| **Name** | Customer's full name |
+| **Email** | Contact email (clickable) |
+| **Shopify ID** | Unique customer identifier |
+| **Store Credit** | Current balance with currency |
+| **Created** | Account creation date |
+| **Updated** | Last modification date |
 
-* **Current balance panel**: mirrors the store credit value shown in the overview but anchors the amount with tone and currency formatting plus quick action buttons (issue credit, deduct credit) so CX agents can take action without leaving the modal.
-* **Transaction table**: lists ledger entries with tone-coded badges (`Cashback`, `Payment`, `Refund`, `Adjustment`, `Sync`), amounts, order references, and timestamps, helping finance and CX teams audit history at a glance.
+### Tier Details Card
 
-***
+Shows current tier information:
 
-## Orders
+| Field | Description |
+|-------|-------------|
+| **Current Tier** | Active tier name with badge |
+| **Cashback Rate** | Percentage earned on orders |
+| **Minimum Spend** | Threshold for current tier |
+| **Evaluation** | Annual or Lifetime |
+| **Progress** | Progress to next tier |
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/Orders.png" alt=""><figcaption></figcaption></figure></div>
+---
 
-* **Order list cards**: each order renders with order name, creation timestamp, and badges for financial plus fulfillment status, alongside the grand total so agents can instantly qualify the request.
-* **Collapsible line items**: a chevron button reveals the order’s line items using a divider, header, and bulleted list that breaks down quantity and per-line totals—ideal for reconciling disputes without leaving the modal.
+## Store Credit Tab
 
-***
+<figure><img src="../.gitbook/assets/Store Credit.png" alt="Store Credit tab showing balance and transaction history"><figcaption>Store Credit management with full transaction history</figcaption></figure>
 
-## Tier Changes
+### Current Balance Panel
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/Tier Changes.png" alt=""><figcaption></figcaption></figure></div>
+- **Balance Display**: Large, prominent balance amount
+- **Currency**: Formatted in your store currency
+- **Quick Actions**: Issue credit, deduct credit buttons
 
-* **Change timeline cards**: each tier change is rendered with a change type (e.g., manual override, upgrade), and timestamp so CX, loyalty, and finance teams can see what happened and when.
-* **Badge transitions**: badges display `from` and `to` tier names with an arrow between them, highlighting whether a shift was an upgrade or downgrade at a glance.
-* **Notes & context**: optional notes, trigger types (e.g., automation, manual), and total spend data appear in subdued text beneath the badges, giving auditors enough context to validate eligibility or detect anomalies.
+### Transaction History Table
+
+Every credit change is recorded:
+
+| Column | Description |
+|--------|-------------|
+| **Date** | When transaction occurred |
+| **Type** | Badge showing transaction type |
+| **Amount** | Credit or debit amount |
+| **Order** | Associated order (if applicable) |
+| **Notes** | Reason or description |
+
+### Transaction Types
+
+| Type | Badge Color | Description |
+|------|-------------|-------------|
+| `Cashback` | Green | Earned from order |
+| `Payment` | Blue | Used at checkout |
+| `Refund` | Orange | Refund to credit |
+| `Adjustment` | Gray | Manual adjustment |
+| `Sync` | Purple | System synchronization |
+
+### Credit Actions
+
+**Add Credit:**
+1. Click **Issue Credit**
+2. Enter amount
+3. Select reason
+4. Add note (optional)
+5. Confirm
+
+**Deduct Credit:**
+1. Click **Deduct Credit**
+2. Enter amount
+3. Enter reason
+4. Confirm
+
+---
+
+## Orders Tab
+
+<figure><img src="../.gitbook/assets/Orders.png" alt="Orders tab showing customer order history"><figcaption>Complete order history with cashback tracking</figcaption></figure>
+
+### Order List Cards
+
+Each order displays:
+
+| Element | Description |
+|---------|-------------|
+| **Order Name** | Order number (e.g., #1234) |
+| **Date** | Order creation timestamp |
+| **Status Badges** | Payment and fulfillment status |
+| **Total** | Order grand total |
+| **Cashback** | Amount earned (if processed) |
+
+### Order Statuses
+
+**Payment Status:**
+- ✅ Paid
+- ⏳ Pending
+- ❌ Refunded
+
+**Fulfillment Status:**
+- 📦 Fulfilled
+- ⏳ Unfulfilled
+- 🔄 Partial
+
+### Expandable Line Items
+
+Click the chevron to reveal:
+- Product names
+- Quantities
+- Line item prices
+- Discounts applied
+
+Useful for:
+- Reconciling disputes
+- Verifying cashback calculation
+- Customer service inquiries
+
+---
+
+## Tier Changes Tab
+
+<figure><img src="../.gitbook/assets/Tier Changes.png" alt="Tier Changes tab showing tier history timeline"><figcaption>Complete audit trail of tier changes</figcaption></figure>
+
+### Change Timeline Cards
+
+Each tier change shows:
+
+| Element | Description |
+|---------|-------------|
+| **Change Type** | Upgrade, Downgrade, Manual Override |
+| **From → To** | Previous and new tier badges |
+| **Date** | When the change occurred |
+| **Trigger** | What caused the change |
+| **Notes** | Additional context |
+
+### Change Types
+
+| Type | Description |
+|------|-------------|
+| **Initial** | First tier assignment |
+| **Upgrade** | Moved to higher tier |
+| **Downgrade** | Moved to lower tier |
+| **Manual** | Admin override |
+| **Recalculation** | System recalculated |
+
+### Badge Transitions
+
+Visual representation:
+- **From tier** → **To tier** with arrow
+- Color-coded to show direction
+- Upgrade = green arrow ↑
+- Downgrade = red arrow ↓
+
+### Context Information
+
+Additional details shown:
+- Trigger type (automation, manual, etc.)
+- Total spend at time of change
+- Admin who made change (if manual)
+- Notes explaining the change
+
+## Quick Actions
+
+From any tab, you can:
+
+| Action | Description |
+|--------|-------------|
+| **Change Tier** | Manually assign different tier |
+| **Add Credit** | Issue store credit |
+| **View in Shopify** | Open customer in Shopify admin |
+| **Email Customer** | Send email (opens mail client) |
+
+## Best Practices
+
+### When to Review Customer Details
+
+- Before making manual tier changes
+- When processing refund requests
+- Investigating cashback discrepancies
+- VIP customer management
+
+### Audit Trail Usage
+
+The tier changes log helps:
+- Verify tier history for disputes
+- Track manual overrides
+- Audit program integrity
+- Report on tier movement
