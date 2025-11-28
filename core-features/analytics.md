@@ -4,122 +4,170 @@ description: Track loyalty program performance with detailed analytics
 
 # Analytics Dashboard
 
-Monitor your loyalty program's health and performance.
+The Analytics Dashboard provides real-time insights into your loyalty program's performance, helping you make data-driven decisions.
+
+---
 
 ## Overview Metrics
 
-### Program Health
+The dashboard displays key performance indicators with month-over-month comparisons:
 
-| Metric | Description |
-|--------|-------------|
-| **Total Members** | All enrolled customers |
-| **Active Members** | Purchased in last 90 days |
-| **Growth Rate** | New members this period |
-| **Engagement Rate** | % using the program |
+### Primary Metrics
 
-### Financial Metrics
+| Metric | Description | Calculation |
+|--------|-------------|-------------|
+| **Total Revenue** | Revenue from orders this month | Sum of order netAmount (paid orders) |
+| **Total Orders** | Number of orders processed | Count of PAID/PARTIALLY_PAID orders |
+| **Cashback Issued** | Store credit given this month | Sum of cashbackAmount |
+| **Active Customers** | Customers who ordered this month | Distinct customers with orders |
+| **Avg Order Value** | Average order size | Total Revenue ÷ Total Orders |
+| **Total Customers** | All enrolled customers | Total customer count |
 
-| Metric | Description |
-|--------|-------------|
-| **Cashback Issued** | Total credit given |
-| **Cashback Redeemed** | Credit used at checkout |
-| **Outstanding Balance** | Unredeemed credit |
-| **Redemption Rate** | % of issued credit used |
+### Comparison View
+
+Each metric shows:
+- **Current month** value
+- **Previous month** value
+- **Percentage change** (up/down indicator)
+- **Trend badge** (positive = green, negative = red)
+
+---
 
 ## Tier Analytics
 
-### Distribution
+### Tier Distribution Chart
 
-See how customers are spread across tiers:
+Visual breakdown of customers across tiers:
 
-```
-Platinum ████░░░░░░░░░░░░░░░░  8%
-Gold     ████████░░░░░░░░░░░░ 18%
-Silver   ██████████████░░░░░░ 32%
-Bronze   ████████████████████ 42%
-```
+| Chart Type | Shows |
+|------------|-------|
+| **Doughnut Chart** | Customer percentage per tier |
+| **Bar Chart** | Total members per tier |
+| **Table View** | Detailed tier metrics |
 
-### Movement
+### Tier Performance Metrics
 
-Track tier changes:
+For each tier, track:
+
+| Metric | Description |
+|--------|-------------|
+| **Members** | Customer count in tier |
+| **Avg Spend** | Average spending per customer |
+| **Total Cashback** | Total cashback earned by tier |
+| **Cashback Rate** | Tier's cashback percentage |
+
+### Tier Movement
+
+Track changes over time:
 - Upgrades this period
-- Downgrades (if annual)
-- New to tier
-- Approaching next tier
+- Downgrades (for Annual evaluation)
+- New customers assigned
+- Customers approaching next tier threshold
 
-## Time-Based Analysis
+---
 
-### Daily View
+## Program Impact
 
-- Orders processed today
-- Cashback issued today
-- New signups today
+### ROI Metrics
 
-### Weekly Summary
+| Metric | Description |
+|--------|-------------|
+| **Customer Lifetime Value** | Predicted total value per customer |
+| **Repeat Purchase Rate** | % of customers with 2+ orders |
+| **Actual Retention Rate** | % of customers retained month-over-month |
 
-- Week-over-week comparison
-- Trend analysis
-- Top customers
+### Monthly Impact Data
 
-### Monthly Report
+Charts showing trends over time:
+- Revenue trend (12 months)
+- Cashback issued trend
+- Order volume trend
+- Active customer trend
 
-- Monthly totals
-- Growth metrics
-- Seasonal patterns
+---
 
-## Customer Insights
+## Customer Behavior Analysis
 
-### Top Customers
+### Spending Analysis
+
+| Segment | Definition |
+|---------|------------|
+| **High Value** | Top 10% by spending |
+| **Growing** | Increased spend vs last period |
+| **At Risk** | Decreased activity |
+| **Dormant** | No orders in 90+ days |
+
+### Customer Insights
 
 View your best customers by:
-- Total spending
-- Cashback earned
-- Order frequency
+- Total spending (totalSpent)
+- Cashback earned (totalCashbackEarned)
+- Order frequency (orderCount)
+- Net value (netSpent)
 
-### At-Risk Customers
+---
 
-Identify customers who:
-- Haven't ordered recently
-- Dropped a tier
-- Have unused credit
+## Time Period Options
+
+### Available Ranges
+
+| Period | Data Shown |
+|--------|------------|
+| **This Month** | Current calendar month |
+| **Last Month** | Previous calendar month |
+| **Last 30 Days** | Rolling 30-day window |
+| **Last 90 Days** | Rolling 90-day window |
+| **Year to Date** | January 1 to today |
+| **Custom Range** | Select specific dates |
+
+### Comparison Periods
+
+All metrics compare against the equivalent previous period for accurate trend analysis.
+
+---
 
 ## Exporting Data
 
 ### Export Options
 
-| Report | Contents |
-|--------|----------|
-| Summary | Key metrics |
-| Customers | Full member list |
-| Transactions | Credit history |
-| Orders | Order details |
+| Report | Contents | Format |
+|--------|----------|--------|
+| **Overview Summary** | Key metrics snapshot | CSV |
+| **Customer List** | All customers with balances | CSV |
+| **Transaction Ledger** | Store credit history | CSV |
+| **Order History** | Orders with cashback | CSV |
+| **Tier Changes** | Tier movement audit log | CSV |
 
-### Export Format
+### Use Cases
 
-All exports available as CSV for use in:
-- Excel / Google Sheets
-- Business intelligence tools
-- Accounting software
+- Import to Excel/Google Sheets for custom analysis
+- Feed into business intelligence tools
+- Accounting reconciliation
+- Customer segmentation
 
-## Using Analytics
+---
+
+## Best Practices
 
 ### Weekly Review
 
-Check these weekly:
-- New member growth
-- Redemption rate
-- Processing errors
+Check these metrics weekly:
+- Order processing success rate
+- Cashback issued vs budget
+- Any failed transactions
 
-### Monthly Planning
+### Monthly Analysis
 
 Review monthly:
-- Tier distribution
-- Cashback liability
-- Customer lifetime value
+- Tier distribution changes
+- Outstanding cashback liability
+- Customer lifetime value trends
+- Top performer recognition
 
-### Optimization
+### Optimization Opportunities
 
-Use data to:
-- Adjust tier thresholds
-- Modify cashback rates
-- Target campaigns
+Use analytics to:
+- Adjust tier thresholds based on actual spending patterns
+- Fine-tune cashback rates for profitability
+- Identify at-risk customers for re-engagement
+- Plan promotional campaigns targeting specific segments

@@ -1,21 +1,5 @@
 ---
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
-metaLinks:
-  alternates:
-    - https://app.gitbook.com/s/yE16Xb3IemPxJWydtPOj/basics/markdown
+description: Modify existing tier settings and understand the impact on customers
 ---
 
 # Editing Existing Tiers
@@ -24,50 +8,109 @@ metaLinks:
 ### When to Edit
 
 * Updating spending thresholds for better segmentation
-* Changing evaluation period strategy
-* Renaming tiers for better clarity
 * Adjusting cashback rates based on profitability
+* Changing tier names or branding (icon, color)
+* Fine-tuning after analyzing program performance
 {% endhint %}
+
+---
+
+## How to Edit a Tier
 
 {% stepper %}
 {% step %}
-#### Locate the tier in the **Loyalty Tiers** card
+### Locate the Tier
 
 <div data-with-frame="true"><figure><img src="../.gitbook/assets/Screenshot 2025-11-18 at 19.49.09.png" alt=""><figcaption></figcaption></figure></div>
 
-Click the **Edit** button on the tier row
+1. Go to **Membership Tiers** page
+2. Find the tier you want to modify
+3. Click the **Edit** button on that row
 {% endstep %}
 
 {% step %}
-#### Modify the desired fields
+### Modify Settings
 
 <div data-with-frame="true"><figure><img src="../.gitbook/assets/Screenshot 2025-11-18 at 19.52.57.png" alt=""><figcaption></figcaption></figure></div>
 
-Click **Save**
+**Editable Fields:**
+
+| Field | Can Edit? | Impact |
+|-------|-----------|--------|
+| Tier Name | Yes | Updates display everywhere |
+| Minimum Spend | Yes | May trigger tier recalculation |
+| Cashback Rate | Yes | Applies to future orders only |
+| Icon | Yes | Visual change only |
+| Color | Yes | Visual change only |
+
+Click **Save** when done.
 {% endstep %}
 {% endstepper %}
 
-***
+---
 
-## Important Considerations
+## Impact on Customers
 
-#### ⚠️ **Customer Impact**:
+### Cashback Rate Changes
 
-* Editing a tier affects **all customers** currently assigned to it
-* Cashback percentage changes apply to **future orders immediately**
-* Threshold changes may trigger automatic tier recalculation
+| Change | Effect |
+|--------|--------|
+| **Increase rate** | Customers earn more on future orders |
+| **Decrease rate** | Customers earn less on future orders |
+| **Past orders** | Not affected - uses rate at time of order |
 
-#### ⚠️ **Spending Threshold Changes**:
+{% hint style="warning" %}
+Cashback rates are locked at time of order. Changing a tier's rate only affects **future** orders, not historical ones.
+{% endhint %}
 
-* **Lowering threshold**: May cause customers to upgrade automatically
-* **Raising threshold**: May cause customers to downgrade if below new threshold
-* **Recommendation**: Review customer distribution before major threshold changes
+### Threshold Changes
 
-#### ⚠️ **Evaluation Period Changes**:
+| Change | What Happens |
+|--------|--------------|
+| **Lower threshold** | More customers may qualify for this tier |
+| **Raise threshold** | Some customers may no longer qualify |
 
-* Switching between Annual/Lifetime recalculates all customer tiers
-* May cause mass tier upgrades or downgrades
-* **Best Practice**: Set evaluation period before launch and avoid changing
+**After threshold changes:**
+1. Run tier recalculation to update assignments
+2. Customers are reassigned based on their current spending
+3. Tier change logs record all movements
 
-Feel free to test it out and copy the Markdown below by hovering over the code block in the upper right, and pasting into a new line underneath.
+### Best Practices
+
+- **Review customer distribution** before changing thresholds
+- **Communicate changes** to customers if rates decrease
+- **Make changes during off-peak hours** to minimize confusion
+- **Test with one tier first** before making program-wide changes
+
+---
+
+## Evaluation Period Changes
+
+{% hint style="danger" %}
+**Caution**: Changing evaluation period affects ALL customers and should rarely be done after launch.
+{% endhint %}
+
+| Change | Effect |
+|--------|--------|
+| Annual → Lifetime | All historical spending counts; customers may upgrade |
+| Lifetime → Annual | Only last 12 months count; customers may downgrade |
+
+**Recommendation**: Set your evaluation period before launching and avoid changing it. If you must change:
+
+1. Export current tier distribution
+2. Communicate the change to customers
+3. Make the change during low-activity period
+4. Monitor tier assignments closely afterward
+
+---
+
+## Audit Trail
+
+All tier edits are logged:
+
+- **What changed**: Field and new value
+- **When**: Timestamp of edit
+- **Who**: Admin who made the change
+
+View the full history in **Analytics** > **Tier Changes**.
 

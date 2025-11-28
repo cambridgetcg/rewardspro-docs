@@ -55,15 +55,32 @@ The customer-facing widget displays:
 
 <figure><img src="../.gitbook/assets/Store Credit Ledger.png" alt="Store Credit transaction ledger"><figcaption>Complete history of credit and debit entries</figcaption></figure>
 
-All changes are recorded as **ledger entries**:
+All changes are recorded as **ledger entries** with specific types:
 
-| Entry Type | Direction | Examples |
-|------------|-----------|----------|
-| **Credit** | + Add | Cashback, refunds, promotions |
-| **Debit** | - Subtract | Checkout redemption |
+| Entry Type | Direction | Description |
+|------------|-----------|-------------|
+| `CASHBACK_EARNED` | + Credit | Cashback from paid orders |
+| `ORDER_PAYMENT` | - Debit | Credit used at checkout |
+| `REFUND_CREDIT` | + Credit | Store credit issued for refund |
+| `REFUND_CLAWBACK` | - Debit | Cashback reversed when order refunded |
+| `MANUAL_ADJUSTMENT` | +/- Either | Admin adds or deducts credit |
+| `SHOPIFY_SYNC` | +/- Either | Sync adjustment from Shopify |
+
+### Sync Status
+
+Each ledger entry has a sync status with Shopify:
+
+| Status | Meaning |
+|--------|---------|
+| `PENDING` | Not yet synced to Shopify |
+| `SYNCING` | Currently syncing |
+| `SYNCED` | Successfully synced |
+| `FAILED` | Sync failed (will retry) |
+| `NOT_APPLICABLE` | Doesn't need sync |
 
 **Ledger benefits:**
-- Complete audit trail
+- Complete audit trail with running balance
+- Linked to specific orders when applicable
 - Transparent to customers
 - Useful for disputes
 - Required for accounting

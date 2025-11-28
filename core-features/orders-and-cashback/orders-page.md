@@ -4,7 +4,9 @@ description: View and manage all orders with cashback tracking
 
 # Orders Page
 
-The Orders page displays all customer orders with their cashback status, allowing you to monitor processing and take action when needed.
+The Orders page displays all customer orders synced from Shopify with their cashback status, allowing you to monitor processing and take action when needed.
+
+---
 
 ## Page Overview
 
@@ -14,23 +16,51 @@ Each order displays:
 
 | Column | Description |
 |--------|-------------|
-| **Order** | Order number (e.g., #1234) |
-| **Date** | Order creation date |
-| **Customer** | Customer name |
-| **Tier** | Customer's tier at order time |
-| **Total** | Order total amount |
-| **Cashback** | Amount earned or pending |
-| **Status** | Processing status |
+| **Order Number** | Shopify order name (e.g., #1234) |
+| **Date** | Order creation date in Shopify |
+| **Customer** | Customer name and email |
+| **Tier at Order** | Customer's tier when order was placed |
+| **Total** | Order total paid by customer |
+| **Cashback** | Amount earned (cashbackAmount) |
+| **Status** | Financial and processing status |
 
-### Status Indicators
+### Order Data Fields
+
+RewardsPro tracks comprehensive financial data for each order:
+
+| Field | Description |
+|-------|-------------|
+| **subtotalPrice** | Sum of line item prices before discounts |
+| **totalDiscounts** | All discounts applied to order |
+| **totalShipping** | Shipping cost |
+| **totalTax** | Tax amount |
+| **totalPrice** | Final amount paid by customer |
+| **totalRefunded** | Amount refunded (if any) |
+| **netAmount** | totalPrice - totalRefunded |
+| **cashbackPercent** | Tier cashback rate at time of order |
+| **cashbackAmount** | Calculated cashback earned |
+| **cashbackProcessed** | Whether cashback has been credited |
+
+### Financial Status
 
 | Status | Badge | Meaning |
 |--------|-------|---------|
-| ✅ Processed | Green | Cashback awarded |
-| ⏳ Pending | Yellow | Awaiting processing |
-| ⏸️ Held | Orange | Flagged for review |
-| ❌ Failed | Red | Processing error |
-| 🔄 Reversed | Gray | Cashback reversed |
+| `PAID` | Green | Payment complete, cashback eligible |
+| `PENDING` | Yellow | Awaiting payment |
+| `AUTHORIZED` | Blue | Payment authorized, not captured |
+| `PARTIALLY_PAID` | Orange | Partial payment received |
+| `PARTIALLY_REFUNDED` | Purple | Some items refunded |
+| `REFUNDED` | Gray | Fully refunded |
+| `VOIDED` | Red | Order voided |
+
+### Cashback Status
+
+| Status | Badge | Meaning |
+|--------|-------|---------|
+| ✅ Processed | Green | Cashback credited to customer |
+| ⏳ Pending | Yellow | Order paid, awaiting processing |
+| ❌ Not Eligible | Gray | Guest order or excluded products |
+| 🔄 Clawed Back | Orange | Cashback reversed due to refund |
 
 ---
 

@@ -8,6 +8,8 @@ description: Manage all your loyalty program members from the Customers Page
 
 The Customers Page displays all customers synced from your Shopify store, allowing you to manage their loyalty status, view balances, and take actions.
 
+---
+
 ## Page Overview
 
 ### Customer List
@@ -16,45 +18,70 @@ Each customer row displays:
 
 | Column | Description |
 |--------|-------------|
-| **Name** | Customer's full name |
+| **Name** | Customer's full name (firstName + lastName) |
 | **Email** | Contact email address |
-| **Tier** | Current loyalty tier with colored badge |
-| **Balance** | Store credit balance in your currency |
-| **Lifetime Spend** | Total amount spent (for tier calculation) |
-| **Status** | Active or inactive indicator |
+| **Tier** | Current loyalty tier with colored badge and icon |
+| **Store Credit** | Available balance in your store currency |
+| **Total Spent** | All-time spending (or annual, based on evaluation) |
+| **Order Count** | Number of orders placed |
+| **Last Order** | Date of most recent order |
+
+### Customer Data Fields
+
+RewardsPro tracks comprehensive data for each customer:
+
+| Field | Description |
+|-------|-------------|
+| **storeCredit** | Current available store credit balance |
+| **pointsBalance** | Current loyalty points balance |
+| **lifetimePoints** | Total points ever earned |
+| **totalSpent** | All-time order value |
+| **annualSpent** | Spending in last 12 months (for tier calculation) |
+| **netSpent** | totalSpent minus refunds |
+| **totalCashbackEarned** | All cashback earned over time |
+| **totalRefunded** | Total refund amount received |
+| **orderCount** | Number of orders |
+| **lastOrderDate** | Most recent order date |
+| **tags** | Shopify customer tags (synced) |
 
 ### Quick Actions
 
 From the customer list you can:
-- Click a row to open **Customer Details**
+- Click a row to open **Customer Details** modal
 - Use checkboxes for **bulk actions**
 - Access **quick tier assignment**
+- **Sync** button to refresh data from Shopify
+
+---
 
 ## Search & Filter
 
 ### Search Box
 
 Find customers quickly by:
-- Full name
+- First name or last name
 - Email address
 - Partial matches supported
+- Customer tags
 
 ### Filter Options
 
 | Filter | Options |
 |--------|---------|
-| **Tier** | Any tier, or specific tier |
-| **Balance** | Has balance, No balance, Custom range |
-| **Status** | Active, Inactive |
-| **Joined** | Date range |
+| **Tier** | All tiers, or select specific tier |
+| **Balance** | Has balance, No balance |
+| **Spend Range** | Custom min/max amount |
+| **Order Count** | Minimum orders placed |
 
 ### Sorting
 
 Sort the list by:
 - Name (A-Z, Z-A)
-- Balance (High to Low, Low to High)
-- Spend (High to Low, Low to High)
-- Joined Date (Newest, Oldest)
+- Store Credit (High to Low, Low to High)
+- Total Spent (High to Low, Low to High)
+- Order Count (Most to Least)
+- Last Order (Newest, Oldest)
+- Created Date (Newest, Oldest)
 
 ## Syncing Customers
 

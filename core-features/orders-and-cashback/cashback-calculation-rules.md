@@ -6,36 +6,50 @@ description: Understand exactly how cashback amounts are calculated
 
 RewardsPro uses a consistent formula to calculate cashback on every order. Understanding these rules helps you configure tiers effectively and explain rewards to customers.
 
+---
+
 ## The Cashback Formula
 
 ```
-Cashback Amount = (Subtotal - Discounts) × Cashback Rate
+Cashback Amount = (subtotalPrice - totalDiscounts) × (cashbackPercent / 100)
 ```
 
 ### Variables Explained
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| **Subtotal** | Sum of line item prices | $150.00 |
-| **Discounts** | Applied discount codes/automatic discounts | -$20.00 |
-| **Cashback Rate** | Customer's tier percentage | 5% |
-| **Cashback Amount** | Final credit earned | $6.50 |
+| Variable | Description | From Order Data |
+|----------|-------------|-----------------|
+| **subtotalPrice** | Sum of line item prices before any adjustments | Order.subtotalPrice |
+| **totalDiscounts** | All discounts applied to the order | Order.totalDiscounts |
+| **cashbackPercent** | Customer's tier percentage at time of order | Tier.cashbackPercent |
+| **cashbackAmount** | Final credit earned (stored on order) | Order.cashbackAmount |
+
+### Important Notes
+
+- **Shipping and tax are NOT included** in cashback calculation
+- **Discounts are subtracted** before calculating cashback
+- **Tier rate is locked** at the time of order (stored as `cashbackPercentAtOrder`)
+- **Cashback is rounded** to 2 decimal places
 
 ### Calculation Example
 
-**Order:**
-- Products: $150.00
-- Discount code: -$20.00
-- Shipping: $10.00
-- Tax: $12.00
-- **Order Total: $152.00**
+**Order Details:**
 
-**Calculation:**
+| Field | Amount |
+|-------|--------|
+| subtotalPrice | $150.00 |
+| totalDiscounts | $20.00 |
+| totalShipping | $10.00 |
+| totalTax | $12.00 |
+| **totalPrice** | **$152.00** |
+
+**Cashback Calculation:**
 ```
 Eligible Amount = $150.00 - $20.00 = $130.00
 Cashback Rate = 5% (Gold tier)
 Cashback = $130.00 × 0.05 = $6.50
 ```
+
+The customer earns **$6.50** in store credit, even though the order total was $152.00.
 
 ---
 
