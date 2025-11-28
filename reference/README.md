@@ -5,7 +5,7 @@ description: Technical documentation for developers and advanced users
 
 # Reference
 
-In-depth technical documentation covering how RewardsPro works under the hood, API integrations, and definitions.
+In-depth technical documentation covering how RewardsPro works under the hood, data structures, and integrations.
 
 ## Quick Links
 
@@ -19,9 +19,14 @@ In-depth technical documentation covering how RewardsPro works under the hood, A
 </thead>
 <tbody>
 <tr>
-<td><strong>Evaluation Periods</strong></td>
-<td>Annual vs Lifetime tier calculations</td>
-<td><a href="evaluation-periods.md">evaluation-periods.md</a></td>
+<td><strong>Glossary</strong></td>
+<td>Complete definitions of all terms</td>
+<td><a href="glossary.md">glossary.md</a></td>
+</tr>
+<tr>
+<td><strong>Data Models</strong></td>
+<td>Technical data structure reference</td>
+<td><a href="data-models.md">data-models.md</a></td>
 </tr>
 <tr>
 <td><strong>Cashback Logic</strong></td>
@@ -29,62 +34,83 @@ In-depth technical documentation covering how RewardsPro works under the hood, A
 <td><a href="cashback-logic.md">cashback-logic.md</a></td>
 </tr>
 <tr>
-<td><strong>API Endpoints</strong></td>
-<td>Integration endpoints for developers</td>
-<td><a href="api-endpoints.md">api-endpoints.md</a></td>
-</tr>
-<tr>
 <td><strong>Webhooks</strong></td>
 <td>Event notifications and processing</td>
 <td><a href="webhooks.md">webhooks.md</a></td>
 </tr>
+<tr>
+<td><strong>Evaluation Periods</strong></td>
+<td>Annual vs Lifetime tier calculations</td>
+<td><a href="evaluation-periods.md">evaluation-periods.md</a></td>
+</tr>
+<tr>
+<td><strong>Multi-Currency</strong></td>
+<td>32 supported currencies and exchange rates</td>
+<td><a href="multi-currency.md">multi-currency.md</a></td>
+</tr>
 </tbody>
 </table>
 
+---
+
 ## Technical Reference
 
-### Evaluation Periods
-Understanding how tier qualification is calculated:
-- **Annual evaluation**: Customer spending resets each year
-- **Lifetime evaluation**: Cumulative spending never resets
-- **Best practices** for choosing the right approach
+### Glossary
+Complete definitions of all terms used in RewardsPro:
+- Tier types and changes
+- Ledger entry types
+- Subscription statuses
+- All enums and values
+
+### Data Models
+Detailed breakdown of all data structures:
+- Customer, Tier, Order models
+- Store credit ledger system
+- Subscription and product models
+- Field types and relationships
 
 ### Cashback Logic
 Detailed breakdown of cashback calculation:
 - Formula and components
 - What's included/excluded
 - Rounding rules and edge cases
+- Multi-currency handling
 
-### Multi-Currency Support
-How RewardsPro handles different currencies:
-- 33 supported currencies
-- Exchange rate management
-- Display formatting
+### Evaluation Periods
+Understanding tier qualification calculation:
+- **Annual evaluation**: Rolling 12-month spending
+- **Lifetime evaluation**: All-time cumulative spending
+- Best practices for choosing the right approach
+
+---
 
 ## Integration
 
 ### API Endpoints
 Available endpoints for custom integrations:
-- Customer data retrieval
-- Store credit operations
-- Tier information
+- Widget membership API
+- Localization endpoints
+- Health check
 
 ### Webhooks
-Event-driven notifications:
+Event-driven notifications (14 webhook types):
 - Order processing events
-- Customer updates
+- Customer lifecycle
 - Subscription changes
+- Compliance (GDPR)
 
-## Appendix
+---
 
-### Glossary
-Definitions of key terms used throughout RewardsPro:
-- Tiers, cashback, store credit
-- Evaluation periods
-- Processing modes
+## Multi-Currency
+
+### 32 Supported Currencies
+How RewardsPro handles different currencies:
+- Exchange rate management
+- Display formatting options
+- Conversion examples
 
 ---
 
 {% hint style="info" %}
-**Developer?** Check out the [API Endpoints](api-endpoints.md) and [Webhooks](webhooks.md) documentation for integration details.
+**Developer?** Start with [Data Models](data-models.md) for the technical structure, then review [Webhooks](webhooks.md) for integration details.
 {% endhint %}
