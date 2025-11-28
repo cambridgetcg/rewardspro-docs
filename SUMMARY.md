@@ -6,6 +6,8 @@
 
 * [Creating Tier Products](tier-products/creating-tier-products.md)
 * [Editing Tier Products](tier-products/editing-tier-products.md)
+* [Subscription Setup](tier-products/subscription-setup.md)
+* [Membership Lifecycle](tier-products/membership-lifecycle.md)
 
 ## Automation
 
