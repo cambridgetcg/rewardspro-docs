@@ -7,56 +7,45 @@ description: Welcome to RewardsPro - The complete loyalty and rewards solution f
 
 RewardsPro is a powerful loyalty and rewards app for Shopify that helps you build customer loyalty through tiered memberships, automatic cashback, and store credit management.
 
----
+## Quick Links
 
-## Documentation Sections
-
-### Core Features
-
-Step-by-step guides for the essential features you'll use every day.
-
-- **Membership Tiers** - Create and manage loyalty tiers
-- **Customer Management** - View and manage customer profiles
-- **Orders & Cashback** - Automatic cashback processing
-- **Store Credit** - Issue and track store credit
-
-### Configuration
-
-Set up your store settings, business metrics, and automation rules.
-
-- **Store Settings** - Currency, timezone, and display options
-- **Business Metrics** - Configure ROI and profitability tracking
-- **Tier Automation** - Automatic tier recalculation
-- **Data Sync** - Import orders and customer data
-
-### Getting Started
-
-New to RewardsPro? Start here for installation and initial setup.
-
-- **Installation** - Install from Shopify App Store
-- **Initial Setup** - Configure your first tier
-- **Quick Start Guide** - Get up and running fast
-
-### Advanced Features
-
-Deep dives into advanced functionality.
-
-- **Tier Products** - Sell tier memberships as products
-- **Customer Portal** - Customer-facing account UI
-- **API Integration** - Developer resources
-- **Automation** - Workflows and triggers
-
-### Resources
-
-Additional help and support materials.
-
-- **FAQ** - Common questions answered
-- **Troubleshooting** - Solve common issues
-- **Support** - Contact our team
+<table data-view="cards">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th data-hidden data-card-target data-type="content-ref"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Getting Started</strong></td>
+<td>New to RewardsPro? Start here</td>
+<td><a href="getting-started/README.md">getting-started/README.md</a></td>
+</tr>
+<tr>
+<td><strong>Core Features</strong></td>
+<td>Tiers, customers, orders & cashback</td>
+<td><a href="core-features/README.md">core-features/README.md</a></td>
+</tr>
+<tr>
+<td><strong>Configuration</strong></td>
+<td>Settings, metrics & automation</td>
+<td><a href="configuration/README.md">configuration/README.md</a></td>
+</tr>
+<tr>
+<td><strong>Advanced Features</strong></td>
+<td>Tier products, portal & API</td>
+<td><a href="advanced-features/README.md">advanced-features/README.md</a></td>
+</tr>
+</tbody>
+</table>
 
 ---
 
-## Quick Start
+## Quick Start Guide
+
+Get up and running in 5 simple steps:
 
 1. **Install RewardsPro** from the Shopify App Store
 2. **Create your first tier** with a cashback percentage
@@ -64,11 +53,71 @@ Additional help and support materials.
 4. **Enable automatic processing** for new orders
 5. **Test the flow** by placing a test order
 
+{% hint style="success" %}
+**Most merchants complete setup in under 15 minutes!**
+{% endhint %}
+
+---
+
+## What You Can Do
+
+### Build Customer Loyalty
+
+Create tiered membership programs where customers earn more as they spend more. Set up Bronze, Silver, Gold tiers - or create your own custom structure.
+
+### Reward Purchases Automatically
+
+When customers place orders, cashback is calculated and credited automatically based on their tier. No manual work required.
+
+### Track Store Credit
+
+All earned rewards are tracked as store credit. Customers can view their balance and redeem at checkout.
+
+### Measure ROI
+
+See exactly how your loyalty program impacts revenue with built-in analytics and profitability tracking.
+
+---
+
+## Popular Guides
+
+<table data-view="cards">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th data-hidden data-card-target data-type="content-ref"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Creating Tiers</strong></td>
+<td>Set up your first membership tier</td>
+<td><a href="core-features/membership-tiers/create.md">core-features/membership-tiers/create.md</a></td>
+</tr>
+<tr>
+<td><strong>Cashback Rules</strong></td>
+<td>How cashback is calculated</td>
+<td><a href="core-features/orders-and-cashback/cashback-calculation-rules.md">core-features/orders-and-cashback/cashback-calculation-rules.md</a></td>
+</tr>
+<tr>
+<td><strong>Business Metrics</strong></td>
+<td>Configure ROI tracking</td>
+<td><a href="configuration/business-metrics.md">configuration/business-metrics.md</a></td>
+</tr>
+<tr>
+<td><strong>Data Sync</strong></td>
+<td>Import historical orders</td>
+<td><a href="configuration/data-sync.md">configuration/data-sync.md</a></td>
+</tr>
+</tbody>
+</table>
+
 ---
 
 ## Need Help?
 
-- **Documentation**: Browse the sections above
-- **Support**: Contact us at support@rewardspro.io
-- **Community**: Join our merchant community
+- **Browse Documentation** - Use the sidebar or search to find guides
+- **Contact Support** - Email us at support@rewardspro.io
+- **FAQ** - Check [Resources](resources/README.md) for common questions
 
