@@ -21,22 +21,22 @@ RewardsPro is a powerful loyalty and rewards app for Shopify that helps you buil
 <tr>
 <td><strong>Getting Started</strong></td>
 <td>New to RewardsPro? Start here</td>
-<td><a href="getting-started/README.md">getting-started/README.md</a></td>
+<td><a href="getting-started/">getting-started</a></td>
 </tr>
 <tr>
 <td><strong>Core Features</strong></td>
 <td>Tiers, customers, orders & cashback</td>
-<td><a href="core-features/README.md">core-features/README.md</a></td>
+<td><a href="core-features/">core-features</a></td>
 </tr>
 <tr>
 <td><strong>Configuration</strong></td>
 <td>Settings, metrics & automation</td>
-<td><a href="configuration/README.md">configuration/README.md</a></td>
+<td><a href="configuration/">configuration</a></td>
 </tr>
 <tr>
 <td><strong>Advanced Features</strong></td>
 <td>Tier products, portal & API</td>
-<td><a href="advanced-features/README.md">advanced-features/README.md</a></td>
+<td><a href="advanced-features/">advanced-features</a></td>
 </tr>
 </tbody>
 </table>
@@ -93,12 +93,12 @@ See exactly how your loyalty program impacts revenue with built-in analytics and
 <tr>
 <td><strong>Creating Tiers</strong></td>
 <td>Set up your first membership tier</td>
-<td><a href="core-features/membership-tiers/create.md">core-features/membership-tiers/create.md</a></td>
+<td><a href="membership-tiers/create.md">membership-tiers/create.md</a></td>
 </tr>
 <tr>
 <td><strong>Cashback Rules</strong></td>
 <td>How cashback is calculated</td>
-<td><a href="core-features/orders-and-cashback/cashback-calculation-rules.md">core-features/orders-and-cashback/cashback-calculation-rules.md</a></td>
+<td><a href="orders-and-cashback/cashback-calculation-rules.md">orders-and-cashback/cashback-calculation-rules.md</a></td>
 </tr>
 <tr>
 <td><strong>Business Metrics</strong></td>
@@ -119,5 +119,5 @@ See exactly how your loyalty program impacts revenue with built-in analytics and
 
 - **Browse Documentation** - Use the sidebar or search to find guides
 - **Contact Support** - Email us at support@rewardspro.io
-- **FAQ** - Check [Resources](resources/README.md) for common questions
+- **FAQ** - Check [Resources](resources/) for common questions
 
