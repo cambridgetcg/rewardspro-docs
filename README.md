@@ -1,10 +1,24 @@
-# Advanced Features
+---
+description: Learn more about documenting APIs in GitBook.
+icon: terminal
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+metaLinks:
+  alternates:
+    - https://app.gitbook.com/s/M9ty6FYa3j98VSBHF9LN/
+---
 
-Take your loyalty program to the next level with RewardsPro's advanced capabilities.
+# Developer Platform API
 
-## In This Section
-
-* [Automation](automation.md) - Webhooks, automatic tier progression, and scheduled tasks
-* [API Integration](api-integration.md) - Connect RewardsPro with other systems
-* [Customization](customization.md) - Branding and widget customization
-* [Multi-Currency](multi-currency.md) - Support for international stores
