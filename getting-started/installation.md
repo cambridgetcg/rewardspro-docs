@@ -4,52 +4,195 @@ description: Install RewardsPro from the Shopify App Store
 
 # Installation
 
-Get RewardsPro up and running in your Shopify store.
+Get RewardsPro installed and connected to your Shopify store in just a few minutes.
 
 ## Requirements
 
 Before installing, ensure you have:
-- A Shopify store (any plan)
-- Store owner or staff access with app installation permissions
-- Customer accounts enabled in your store
+
+| Requirement | Details |
+|-------------|---------|
+| **Shopify Store** | Any Shopify plan (Basic, Shopify, Advanced, Plus) |
+| **Admin Access** | Store owner or staff with app installation permissions |
+| **Customer Accounts** | Enabled in your store settings |
+
+### Enabling Customer Accounts
+
+If customer accounts aren't enabled:
+
+1. Go to **Shopify Admin** → **Settings** → **Customer accounts**
+2. Select **"Accounts are optional"** or **"Accounts are required"**
+3. Save changes
+
+{% hint style="info" %}
+Customer accounts are required for customers to view their tier status and store credit balance.
+{% endhint %}
+
+---
 
 ## Installation Steps
 
-### Step 1: Install from App Store
+### Step 1: Find RewardsPro
 
-1. Visit the [Shopify App Store](https://apps.shopify.com)
+**Option A: Direct Link**
+Visit the RewardsPro listing on the Shopify App Store (link provided by us).
+
+**Option B: Search**
+1. Go to [apps.shopify.com](https://apps.shopify.com)
 2. Search for "RewardsPro"
-3. Click **Add app**
-4. Review permissions and click **Install**
+3. Click on the RewardsPro listing
 
-### Step 2: Authorize Permissions
+### Step 2: Add the App
 
-RewardsPro requires the following permissions:
+1. Click **Add app** on the listing page
+2. You'll be redirected to your Shopify admin
+3. Review the app permissions
 
-| Permission | Purpose |
-|------------|---------|
-| Read/Write Customers | Manage loyalty program members |
-| Read Orders | Track purchases for cashback |
-| Read/Write Products | Create tier products |
-| Store Credit | Manage customer credit balances |
+### Step 3: Authorize Permissions
 
-### Step 3: Complete Setup Wizard
+RewardsPro requires these permissions to function:
 
-After installation, you'll be guided through:
-1. Creating your first tier
-2. Setting your default cashback rate
-3. Configuring your store currency
-4. Enabling the customer widget
+| Permission | Why It's Needed |
+|------------|-----------------|
+| **Read/Write Customers** | Create and manage loyalty profiles |
+| **Read Orders** | Track purchases for cashback calculation |
+| **Read/Write Products** | Create tier membership products (optional) |
+| **Read Store Info** | Display correct currency and timezone |
 
-## Post-Installation
+Click **Install app** to grant permissions.
 
-After installing:
-- ✅ Sync existing customers
-- ✅ Review default tier settings
-- ✅ Test the customer widget
-- ✅ Place a test order to verify cashback
+### Step 4: Complete Setup
+
+After installation, you'll be taken to the RewardsPro dashboard. From here:
+
+1. **Welcome Screen**: Brief overview of features
+2. **Quick Setup Wizard**: Create your first tier (optional)
+3. **Dashboard**: Main app interface
+
+---
+
+## First-Time Setup Wizard
+
+If prompted, the setup wizard will guide you through:
+
+### Currency & Timezone
+
+- Your store currency is detected automatically
+- Timezone syncs from your Shopify settings
+- You can adjust these later in Settings
+
+### Default Tier
+
+Create a basic tier structure:
+
+| Suggested Setup | Value |
+|-----------------|-------|
+| Tier Name | "Bronze" or "Member" |
+| Minimum Spend | $0 |
+| Cashback Rate | 2-3% |
+
+{% hint style="warning" %}
+You can skip the wizard and set up manually, but we recommend completing it for a faster start.
+{% endhint %}
+
+---
+
+## Post-Installation Checklist
+
+After installation, complete these steps:
+
+### Immediate (Do Now)
+
+- [ ] Verify app appears in your Shopify admin sidebar
+- [ ] Check that your currency displays correctly
+- [ ] Create at least one tier (if not done in wizard)
+
+### Before Launching
+
+- [ ] [Create your tier structure](first-tier.md)
+- [ ] [Sync historical data](initial-data-sync.md)
+- [ ] [Test with a sample order](testing-your-setup.md)
+
+### Optional but Recommended
+
+- [ ] [Assign VIP customers to top tiers](assigning-vips.md)
+- [ ] [Configure business metrics](../configuration/business-metrics.md) for ROI tracking
+- [ ] Enable the customer widget in your theme
+
+---
+
+## Accessing RewardsPro
+
+After installation, access the app through:
+
+### From Shopify Admin
+
+1. Go to your Shopify admin
+2. Click **Apps** in the sidebar
+3. Click **RewardsPro**
+
+### Direct URL
+
+Bookmark: `https://admin.shopify.com/store/[your-store]/apps/rewardspro`
+
+---
+
+## Troubleshooting Installation
+
+### App Won't Install
+
+**Check:**
+- You have admin/owner permissions
+- You're logged into the correct store
+- No browser extensions blocking installation
+
+**Try:**
+1. Use a different browser
+2. Clear cookies and cache
+3. Disable ad blockers temporarily
+
+### Permission Errors
+
+**Check:**
+- Your staff account has app management permissions
+- You're not on a restricted staff role
+
+**Solution:**
+Ask the store owner to install the app.
+
+### App Installed but Not Working
+
+**Check:**
+- App appears in Apps list
+- No error messages in the dashboard
+- Browser JavaScript is enabled
+
+**Try:**
+1. Refresh the page
+2. Log out and back in
+3. Contact support if issues persist
+
+---
+
+## Uninstalling (If Needed)
+
+To uninstall RewardsPro:
+
+1. Go to **Shopify Admin** → **Settings** → **Apps and sales channels**
+2. Find RewardsPro
+3. Click **Uninstall**
+
+{% hint style="warning" %}
+**Warning**: Uninstalling removes all loyalty data including customer balances and tier assignments. This cannot be undone.
+{% endhint %}
+
+---
 
 ## Next Steps
 
-- [Quickstart Checklist](quickstart-checklist.md)
-- [Create Your First Tier](first-tier.md)
+Now that RewardsPro is installed:
+
+1. **[Create Your First Tier](first-tier.md)** - Set up your loyalty structure
+2. **[Tier Strategy Guide](tier-strategy.md)** - Plan an effective tier system
+3. **[Initial Data Sync](initial-data-sync.md)** - Import existing customers and orders
+

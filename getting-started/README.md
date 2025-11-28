@@ -5,9 +5,9 @@ description: Get up and running with RewardsPro in minutes
 
 # Getting Started
 
-Welcome to RewardsPro! This guide will help you set up your loyalty program quickly and efficiently.
+Welcome to RewardsPro! This guide will help you set up your loyalty program quickly and efficiently. Most merchants complete setup in under 15 minutes.
 
-## Quick Links
+## Setup Overview
 
 <table data-view="cards">
 <thead>
@@ -19,51 +19,103 @@ Welcome to RewardsPro! This guide will help you set up your loyalty program quic
 </thead>
 <tbody>
 <tr>
-<td><strong>Installation</strong></td>
-<td>Install RewardsPro from Shopify App Store</td>
+<td><strong>1. Installation</strong></td>
+<td>Install from Shopify App Store</td>
 <td><a href="installation.md">installation.md</a></td>
 </tr>
 <tr>
-<td><strong>Quickstart Checklist</strong></td>
-<td>Step-by-step setup verification</td>
-<td><a href="quickstart-checklist.md">quickstart-checklist.md</a></td>
+<td><strong>2. Create Tiers</strong></td>
+<td>Set up your loyalty structure</td>
+<td><a href="first-tier.md">first-tier.md</a></td>
 </tr>
 <tr>
-<td><strong>First Tier</strong></td>
-<td>Create your first membership tier</td>
-<td><a href="first-tier.md">first-tier.md</a></td>
+<td><strong>3. Import Data</strong></td>
+<td>Sync customers and orders</td>
+<td><a href="initial-data-sync.md">initial-data-sync.md</a></td>
+</tr>
+<tr>
+<td><strong>4. Test & Launch</strong></td>
+<td>Verify and go live</td>
+<td><a href="testing-your-setup.md">testing-your-setup.md</a></td>
 </tr>
 </tbody>
 </table>
 
-## Setup Process
+---
 
-### 1. Installation
-Install RewardsPro from the Shopify App Store and grant the required permissions.
+## Quick Start (5 Minutes)
 
-### 2. Initial Setup
-- Your customers will automatically sync from Shopify
-- Configure your store currency and timezone
-- Enable the features you need
+For merchants who want to get started immediately:
 
-### 3. Create Tiers
-Set up your membership tier structure:
-- Define tier names and thresholds
-- Set cashback percentages for each tier
-- Choose your evaluation period (annual or lifetime)
+### Step 1: Install & Open
+Install RewardsPro from the Shopify App Store and open the app.
 
-### 4. Configure Cashback
-Decide how cashback should be processed:
-- **Automatic**: Instant cashback when orders are paid
-- **Manual**: Review and approve each order
+### Step 2: Create Your First Tier
+Go to **Membership Tiers** → **Create Tier**:
+- Name: "Bronze" (or your preferred name)
+- Minimum Spend: $0
+- Cashback Rate: 2%
 
-### 5. Test Your Setup
-- Place a test order
-- Verify cashback is calculated correctly
-- Check customer balances update properly
+### Step 3: Create a Second Tier
+Create at least one upgrade tier:
+- Name: "Silver"
+- Minimum Spend: $500
+- Cashback Rate: 4%
+
+### Step 4: Enable Automation
+Go to **Settings** → **Tier Automation** and enable automatic tier recalculation.
+
+### Step 5: You're Live!
+New orders will now earn cashback automatically.
+
+{% hint style="success" %}
+**That's it!** Your basic loyalty program is now active. Customers will earn cashback based on their tier.
+{% endhint %}
 
 ---
 
-{% hint style="success" %}
-**Ready to start?** Begin with the [Installation](installation.md) guide.
-{% endhint %}
+## Complete Setup Guide
+
+For a more thorough setup, follow these guides in order:
+
+### Phase 1: Foundation
+
+| Step | Guide | Time |
+|------|-------|------|
+| 1 | [Installation](installation.md) | 2 min |
+| 2 | [Create Your First Tier](first-tier.md) | 5 min |
+| 3 | [Tier Strategy Guide](tier-strategy.md) | 10 min |
+
+### Phase 2: Data Import
+
+| Step | Guide | Time |
+|------|-------|------|
+| 4 | [Initial Data Sync](initial-data-sync.md) | 5-30 min |
+| 5 | [Assigning Existing VIPs](assigning-vips.md) | 5 min |
+
+### Phase 3: Launch
+
+| Step | Guide | Time |
+|------|-------|------|
+| 6 | [Testing Your Setup](testing-your-setup.md) | 10 min |
+| 7 | [Going Live Checklist](going-live-checklist.md) | 5 min |
+
+---
+
+## What Happens After Setup?
+
+Once your loyalty program is live:
+
+1. **New Orders** → Cashback is calculated and credited automatically
+2. **Customer Balances** → Updated in real-time
+3. **Tier Progress** → Customers advance through tiers as they spend
+4. **Widget** → Customers see their tier and balance on your store
+
+---
+
+## Need Help?
+
+- **Stuck on a step?** Check [Common Setup Mistakes](common-setup-mistakes.md)
+- **Questions?** Email support@rewardspro.io
+- **Want to customize?** See the [Configuration](../configuration/) section
+
