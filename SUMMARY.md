@@ -21,10 +21,12 @@
 
 ## Orders & Cashback
 
+* [Orders Page](orders-and-cashback/orders-page.md)
 * [Cashback Processing](orders-and-cashback/cashback-processing.md)
 * [Cashback Calculation Rules](orders-and-cashback/cashback-calculation-rules.md)
 
 ## Store Credit
 
 * [Access Store Credits](store-credit/access-store-credits.md)
-* [Expiration dates](store-credit/expiration-dates.md)
+* [Refund to Credit](store-credit/refund-to-credit.md)
+* [Expiration Dates](store-credit/expiration-dates.md)
