@@ -38,6 +38,16 @@ Customize RewardsPro to optimize your loyalty program. This section covers all e
 <td>Order and customer sync options</td>
 <td><a href="data-sync.md">data-sync.md</a></td>
 </tr>
+<tr>
+<td><strong>Email Settings</strong></td>
+<td>Branded email notifications (Max & Ultra)</td>
+<td><a href="email-settings.md">email-settings.md</a></td>
+</tr>
+<tr>
+<td><strong>Feature Toggles</strong></td>
+<td>Enable or disable specific features</td>
+<td><a href="feature-toggles.md">feature-toggles.md</a></td>
+</tr>
 </tbody>
 </table>
 

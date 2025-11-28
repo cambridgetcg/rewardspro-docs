@@ -4,7 +4,7 @@ description: Handle multiple currencies in your loyalty program
 
 # Multi-Currency Support
 
-RewardsPro supports 33 currencies with automatic exchange rate management, allowing international stores to operate seamlessly.
+RewardsPro supports 32 currencies with automatic exchange rate management, allowing international stores to operate seamlessly.
 
 ---
 
@@ -19,32 +19,31 @@ RewardsPro supports 33 currencies with automatic exchange rate management, allow
 | AUD | Australian Dollar | A$ |
 | JPY | Japanese Yen | ¥ |
 | CNY | Chinese Yuan | ¥ |
-| INR | Indian Rupee | ₹ |
-| BRL | Brazilian Real | R$ |
+| CHF | Swiss Franc | CHF |
+| SEK | Swedish Krona | kr |
+| NZD | New Zealand Dollar | NZ$ |
+| NOK | Norwegian Krone | kr |
 | MXN | Mexican Peso | MX$ |
-| KRW | South Korean Won | ₩ |
 | SGD | Singapore Dollar | S$ |
 | HKD | Hong Kong Dollar | HK$ |
-| NZD | New Zealand Dollar | NZ$ |
-| SEK | Swedish Krona | kr |
-| NOK | Norwegian Krone | kr |
-| DKK | Danish Krone | kr |
-| CHF | Swiss Franc | CHF |
-| PLN | Polish Zloty | zł |
-| CZK | Czech Koruna | Kč |
-| ZAR | South African Rand | R |
-| RUB | Russian Ruble | ₽ |
+| KRW | South Korean Won | ₩ |
 | TRY | Turkish Lira | ₺ |
-| ILS | Israeli Shekel | ₪ |
+| INR | Indian Rupee | ₹ |
+| RUB | Russian Ruble | ₽ |
+| BRL | Brazilian Real | R$ |
+| ZAR | South African Rand | R |
 | AED | UAE Dirham | د.إ |
-| SAR | Saudi Riyal | ر.س |
-| MYR | Malaysian Ringgit | RM |
+| PLN | Polish Zloty | zł |
+| DKK | Danish Krone | kr |
 | THB | Thai Baht | ฿ |
 | IDR | Indonesian Rupiah | Rp |
+| HUF | Hungarian Forint | Ft |
+| CZK | Czech Koruna | Kč |
+| ILS | Israeli Shekel | ₪ |
+| CLP | Chilean Peso | CLP$ |
 | PHP | Philippine Peso | ₱ |
-| VND | Vietnamese Dong | ₫ |
-| TWD | Taiwan Dollar | NT$ |
-| PKR | Pakistani Rupee | Rs |
+| RON | Romanian Leu | lei |
+| MYR | Malaysian Ringgit | RM |
 
 ---
 

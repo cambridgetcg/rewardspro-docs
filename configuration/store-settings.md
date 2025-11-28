@@ -51,7 +51,7 @@ This field is **read-only** and automatically synced from Shopify.
 
 The primary currency for displaying store credit and cashback amounts.
 
-**Supported Currencies (33 total):**
+**Supported Currencies (32 total):**
 
 | Region | Currencies |
 |--------|------------|

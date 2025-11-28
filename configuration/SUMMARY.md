@@ -15,3 +15,5 @@
 
 * [Cashback Settings](cashback-settings.md)
 * [Widget Settings](widget-settings.md)
+* [Email Settings](email-settings.md)
+* [Feature Toggles](feature-toggles.md)
