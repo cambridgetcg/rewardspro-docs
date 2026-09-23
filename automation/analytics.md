@@ -58,8 +58,8 @@ Generated on the 1st of each month:
 
 - Monthly recurring metrics
 - Seasonal trend analysis
-- Program health score
-- Growth rate calculations
+- Recorded amounts and their calculation assumptions
+- Changes over time, without growth targets
 
 ## Real-Time Tracking
 
@@ -173,9 +173,7 @@ Configure alerts for:
 | Alert | Trigger |
 |-------|---------|
 | High Redemption | Credit usage spike |
-| Low Engagement | Activity drops 20%+ |
 | Processing Error | Webhook failures |
-| Milestone | Program reaches goal |
 
 ### Alert Channels
 
@@ -184,21 +182,10 @@ Receive alerts via:
 - Shopify admin notifications
 - Slack integration (coming soon)
 
-## Best Practices
+## Use reports when needed
 
-### Review Frequency
-
-| Report | Recommended Review |
-|--------|-------------------|
-| Daily metrics | Glance each morning |
-| Weekly summary | Team meeting review |
-| Monthly report | Strategic planning |
-| Quarterly trends | Program optimization |
-
-### Key Questions to Ask
-
-1. Is our redemption rate healthy? (Target: 40-60%)
-2. Are customers progressing through tiers?
-3. What's our cashback liability?
-4. Which tier drives the most revenue?
-5. Are new members engaging quickly?
+Inspect existing balances, failed processing, refunds or another concrete
+question without a mandatory reporting cadence. Low activity, revenue,
+redemption or retention creates no alert, deficit or work requirement.
+Actual processing failures and existing liabilities still deserve accurate
+reporting. No replacement learning or output quota applies.

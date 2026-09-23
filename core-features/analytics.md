@@ -147,27 +147,10 @@ All metrics compare against the equivalent previous period for accurate trend an
 
 ---
 
-## Best Practices
+## Understanding existing records
 
-### Weekly Review
-
-Check these metrics weekly:
-- Order processing success rate
-- Cashback issued vs budget
-- Any failed transactions
-
-### Monthly Analysis
-
-Review monthly:
-- Tier distribution changes
-- Outstanding cashback liability
-- Customer lifetime value trends
-- Top performer recognition
-
-### Optimization Opportunities
-
-Use analytics to:
-- Adjust tier thresholds based on actual spending patterns
-- Fine-tune cashback rates for profitability
-- Identify at-risk customers for re-engagement
-- Plan promotional campaigns targeting specific segments
+Use these reports when they answer a concrete question about existing orders,
+cashback liabilities, failed transactions or refunds. There is no prescribed
+review cadence, growth target, ranking or promotional campaign to complete.
+Revenue and retention figures describe observations; they do not judge the
+project or require further activity.

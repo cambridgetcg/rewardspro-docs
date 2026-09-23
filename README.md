@@ -1,11 +1,17 @@
 ---
 icon: house
-description: Welcome to RewardsPro - The complete loyalty and rewards solution for Shopify
+description: RewardsPro existing service and historical feature documentation
 ---
 
-# Welcome to RewardsPro
+# RewardsPro documentation
 
-RewardsPro is a powerful loyalty and rewards app for Shopify that helps you build customer loyalty through tiered memberships, automatic cashback, and store credit management.
+This repository preserves RewardsPro feature and existing-service documentation.
+New paid sign-ups, trials and upgrades are retired; older feature descriptions
+are not current offers or instructions to grow a business. Existing balances,
+orders, refunds and agreed service obligations remain intact.
+
+There are no revenue, acquisition, learning or output quotas. See
+[the current billing status](billing/plans.md).
 
 ## Quick Links
 
@@ -20,7 +26,7 @@ RewardsPro is a powerful loyalty and rewards app for Shopify that helps you buil
 <tbody>
 <tr>
 <td><strong>Getting Started</strong></td>
-<td>New to RewardsPro? Start here</td>
+<td>Historical setup reference</td>
 <td><a href="getting-started/">getting-started</a></td>
 </tr>
 <tr>
@@ -43,21 +49,10 @@ RewardsPro is a powerful loyalty and rewards app for Shopify that helps you buil
 
 ---
 
-## Quick Start Guide
+## Existing installations
 
-Get up and running in 5 simple steps:
-
-1. **Install RewardsPro** from the Shopify App Store
-2. **Create your first tier** with a cashback percentage
-3. **Sync your customers** from Shopify
-4. **Enable automatic processing** for new orders
-5. **Test the flow** by placing a test order
-
-{% hint style="success" %}
-**Most merchants complete setup in under 15 minutes!**
-{% endhint %}
-
----
+Use the relevant feature or support page to understand an existing installation.
+The former acquisition walkthrough is retained in history.
 
 ## What You Can Do
 
@@ -73,9 +68,9 @@ When customers place orders, cashback is calculated and credited automatically b
 
 All earned rewards are tracked as store credit. Customers can view their balance and redeem at checkout.
 
-### Measure ROI
+### Inspect recorded costs and amounts
 
-See exactly how your loyalty program impacts revenue with built-in analytics and profitability tracking.
+Historical analytics describe recorded amounts and assumptions. They are not growth targets or a requirement to justify this project financially.
 
 ---
 
@@ -102,7 +97,7 @@ See exactly how your loyalty program impacts revenue with built-in analytics and
 </tr>
 <tr>
 <td><strong>Business Metrics</strong></td>
-<td>Configure ROI tracking</td>
+<td>Understand recorded calculations</td>
 <td><a href="configuration/business-metrics.md">configuration/business-metrics.md</a></td>
 </tr>
 <tr>

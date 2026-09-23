@@ -1,0 +1,138 @@
+RETIRED HISTORY — 2026-09-23
+Original source follows unchanged. Not an active instruction or offer.
+
+---
+description: RewardsPro pricing plans and features
+---
+
+# Plans & Pricing
+
+Choose the plan that fits your store's needs.
+
+## Plan Comparison
+
+| Feature | Free | Starter | Growth | Enterprise |
+|---------|------|---------|--------|------------|
+| **Orders/Month** | 100 | 500 | 2,000 | Unlimited |
+| **Price** | $0 | $19/mo | $49/mo | $99/mo |
+| | | | | |
+| Loyalty Tiers | ✅ | ✅ | ✅ | ✅ |
+| Automatic Cashback | ✅ | ✅ | ✅ | ✅ |
+| Store Credit | ✅ | ✅ | ✅ | ✅ |
+| Customer Widget | ✅ | ✅ | ✅ | ✅ |
+| Analytics | Basic | Full | Full | Full |
+| Tier Products | ❌ | ✅ | ✅ | ✅ |
+| Subscriptions | ❌ | ❌ | ✅ | ✅ |
+| API Access | ❌ | ❌ | ✅ | ✅ |
+| Priority Support | ❌ | ❌ | ❌ | ✅ |
+
+## Free Plan
+
+Perfect for new or small stores testing loyalty programs.
+
+**Includes:**
+- Up to 100 orders/month
+- Unlimited tiers
+- Basic analytics
+- Customer widget
+- Email support
+
+**Limitations:**
+- No tier products
+- Basic analytics only
+- Standard support
+
+## Starter Plan - $19/month
+
+Great for growing stores with moderate volume.
+
+**Everything in Free, plus:**
+- Up to 500 orders/month
+- Tier products
+- Full analytics
+- Priority email support
+
+## Growth Plan - $49/month
+
+For established stores with significant order volume.
+
+**Everything in Starter, plus:**
+- Up to 2,000 orders/month
+- Subscription billing
+- API access
+- Advanced analytics
+- Chat support
+
+## Enterprise Plan - $99/month
+
+For high-volume stores needing premium features.
+
+**Everything in Growth, plus:**
+- Unlimited orders
+- Priority support
+- Custom integrations
+- Dedicated success manager
+- SLA guarantee
+
+## Billing
+
+### Payment Methods
+
+- Credit/debit card (via Shopify)
+- Shopify billing integration
+
+### Billing Cycle
+
+- Charged monthly through Shopify
+- Pro-rated for plan changes
+- Usage tracked in real-time
+
+### Order Counting
+
+Orders are counted when:
+- Payment is confirmed
+- Processed for cashback
+
+Not counted:
+- Cancelled orders
+- Test orders
+- Draft orders
+
+## Upgrading
+
+### When to Upgrade
+
+Consider upgrading if:
+- Approaching order limit
+- Need advanced features
+- Want priority support
+
+### How to Upgrade
+
+1. Go to **Billing** in RewardsPro
+2. Click **Upgrade Plan**
+3. Select new plan
+4. Confirm through Shopify
+
+### Pro-Rating
+
+- Upgrade: Pay difference immediately
+- Downgrade: Credit applied to next bill
+
+## FAQ
+
+### What happens if I exceed my order limit?
+
+You'll be notified and prompted to upgrade. Processing continues but you should upgrade promptly.
+
+### Can I downgrade my plan?
+
+Yes, downgrades take effect at next billing cycle.
+
+### Is there a free trial?
+
+The Free plan serves as your trial. Upgrade when ready.
+
+### Do you offer annual billing?
+
+Contact us for annual billing discounts.
