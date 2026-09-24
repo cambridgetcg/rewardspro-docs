@@ -4,7 +4,7 @@
 
 * [Advanced Features](README.md)
 
-## Tier Monetization
+## Existing tier agreements
 
 * [Tier Products](tier-products.md)
 * [Tier Subscriptions](tier-subscriptions.md)
