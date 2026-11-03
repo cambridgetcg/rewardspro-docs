@@ -1,270 +1,98 @@
 ---
-description: Configure branded email notifications for your loyalty program (Max & Ultra plans)
+description: Set the sender, sending domain and branding of the emails RewardsPro sends
 ---
 
 # Email Settings
 
-Send professional, branded email notifications to customers about their rewards, tier changes, and program updates.
+RewardsPro sends emails to your customers about their loyalty program. This page covers which emails go out and the settings that shape them.
 
-{% hint style="info" %}
-**Plan Requirement**: Email configuration is available on Max and Ultra plans only. Basic notification emails are included in all plans.
+{% hint style="warning" %}
+**Not available yet**
+
+- **Email campaigns and automations** aren't sending yet. You can draft them, but nothing is sent.
+- **The AI writing assistant** in the email editor isn't available.
+{% endhint %}
+
+---
+
+## Emails RewardsPro Sends on Its Own
+
+| Email | When it's sent |
+|-------|----------------|
+| **Welcome** | When a customer is created in your Shopify store, or when Shopify sends an update about a customer RewardsPro hasn't imported yet |
+| **Tier upgrade** | When a paid order moves a customer up a tier |
+| **Tier downgrade** | When a paid order moves a customer down a tier |
+| **Tier membership ending** | For a tier membership with an end date, such as one bought as a tier product: a warning before it ends, and a notice when it has ended. A daily scheduled job sends these |
+
+Refunds, tier changes you make by hand and scheduled tier recalculation don't send any of these emails.
+
+### When They Start
+
+The welcome and tier upgrade emails start once RewardsPro has saved email settings for your store. That happens the first time you:
+
+- choose In-House or Klaviyo on the **Marketing** page, or close that choice
+- save **Email Settings**
+- connect Klaviyo
+- switch to your own sending domain
+
+The tier downgrade and tier membership emails don't wait for that, so they can go out from the day you install. Until you've saved email settings, they're sent from "RewardsPro" at rewards@rewardspro.io.
+
+### Turning Them Off
+
+There's no switch to turn these emails off. If you connect Klaviyo and choose it as your marketing platform, RewardsPro stops sending the welcome and tier upgrade emails itself, and your Klaviyo flows decide what goes out. RewardsPro still sends the tier downgrade and tier membership emails.
+
+{% hint style="warning" %}
+**Read these emails before your customers get them.** They go to customers whether or not they accept email marketing, and they have no unsubscribe link. The welcome email thanks the customer for joining your loyalty program and has a **Shop Now** button. The tier upgrade email has a **Start Earning More** button. You're responsible for any consent your emails need ([Terms](https://rewardspro.io/terms/), section 4).
 {% endhint %}
 
 ---
 
 ## Accessing Email Settings
 
-1. Go to **Settings** in the main navigation
-2. Select the **Email** tab
+1. Go to **Marketing** in the RewardsPro navigation
+2. Click **Settings** on the Marketing overview
+
+The page is called **Email Settings**.
 
 ---
 
-## Email Configuration
+## Marketing Platform
 
-### Enable Email Notifications
-
-| Setting | Default | Description |
-|---------|---------|-------------|
-| **Email Enabled** | Off | Master toggle for custom email notifications |
-
-When enabled, customers receive emails for:
-- Tier upgrades and downgrades
-- Cashback earned confirmations
-- Store credit balance updates
-- Program announcements
+| Option | What it means |
+|--------|---------------|
+| **In-House** | RewardsPro sends your emails, using SendGrid |
+| **Klaviyo** | RewardsPro sends customer profiles and events to your Klaviyo account, where you build flows and campaigns. We haven't tested the Klaviyo connection on the current version of RewardsPro yet |
 
 ---
 
-## Email Provider Options
+## Sending Domain
 
-Choose your email delivery service:
-
-| Provider | Best For | Features |
-|----------|----------|----------|
-| **SendGrid** | Most stores | Easy setup, reliable delivery, analytics |
-| **Mailgun** | Technical teams | Developer-friendly, flexible |
-| **Amazon SES** | High volume | Cost-effective, scalable |
-| **Custom SMTP** | Existing infrastructure | Use your own mail server |
-
-### SendGrid Setup
-
-1. Create a SendGrid account
-2. Generate an API key with "Mail Send" permissions
-3. Enter API key in RewardsPro settings
-4. Verify sender email
-
-### Mailgun Setup
-
-1. Create a Mailgun account
-2. Verify your domain
-3. Generate an API key
-4. Enter credentials in RewardsPro settings
-
-### Amazon SES Setup
-
-1. Set up SES in AWS Console
-2. Verify sender domain
-3. Request production access (out of sandbox)
-4. Generate SMTP credentials
-5. Enter credentials in RewardsPro settings
-
-### Custom SMTP Setup
-
-For your own mail server:
-
-| Field | Description | Example |
-|-------|-------------|---------|
-| **SMTP Host** | Mail server hostname | `smtp.yourcompany.com` |
-| **SMTP Port** | Server port | `587` (TLS) or `465` (SSL) |
-| **Username** | SMTP username | `notifications@yourcompany.com` |
-| **Password** | SMTP password | (encrypted) |
-
-{% hint style="warning" %}
-All email credentials are encrypted using AES-256-GCM before storage. Your API keys and passwords are never stored in plain text.
-{% endhint %}
+| Mode | From address |
+|------|--------------|
+| **Shared Domain** (default) | Emails are sent from **rewards@rewardspro.io** with the From Name you set. Check it: it's "Store" if your settings were first saved from the Marketing page. |
+| **Custom Domain** | Emails are sent from your own domain once you've added the DNS records RewardsPro shows you and clicked **Verify DNS**. |
 
 ---
 
 ## Sender Configuration
 
-### From Name
-
-The name displayed as the email sender.
-
 | Field | Details |
 |-------|---------|
-| **Max Length** | 100 characters |
-| **Example** | "MyStore Rewards" |
-| **Recommendation** | Use your brand name + "Rewards" or "VIP" |
-
-### From Address
-
-The email address shown as the sender.
-
-| Field | Details |
-|-------|---------|
-| **Format** | Valid email address |
-| **Example** | `rewards@mystore.com` |
-| **Requirement** | Must be verified with your email provider |
-
-### Reply-To Address
-
-Where customer replies are directed.
-
-| Field | Details |
-|-------|---------|
-| **Format** | Valid email address |
-| **Example** | `support@mystore.com` |
-| **Recommendation** | Use a monitored inbox |
-
-{% hint style="info" %}
-**Tip**: Set reply-to to your support email so customer questions reach the right team.
-{% endhint %}
+| **From Name** | The name in the "From" field, such as "MyStore Rewards" |
+| **From Email** | With a custom domain, it must match your verified domain. In shared mode, From Email isn't used |
+| **Reply-To Email** | Where replies go. In shared mode, set it to an inbox you check, or replies go to rewards@rewardspro.io instead of to you |
 
 ---
 
-## Branding
+## Brand Customization
 
-### Email Logo
-
-Your logo displayed in email headers.
-
-| Requirement | Details |
-|-------------|---------|
-| **Format** | PNG, JPG, or SVG |
-| **Size** | Max 200KB |
-| **Dimensions** | Recommended 200x50px |
-| **URL** | Must be HTTPS |
-
-### Primary Brand Color
-
-The main color used for buttons and accents.
-
-| Field | Details |
-|-------|---------|
-| **Format** | Hex code (e.g., `#5C6AC4`) |
-| **Used In** | Buttons, links, tier badges |
-| **Recommendation** | Match your store's primary color |
-
-### Footer Text
-
-Custom text in email footer.
-
-| Field | Details |
-|-------|---------|
-| **Max Length** | 500 characters |
-| **Default** | Company address and unsubscribe info |
-| **Example** | "123 Main St, City, State 12345" |
+Set a **Primary color**, a **Secondary color** and a **Font Family** for your emails.
 
 ---
 
-## Custom Email Domain (Ultra Plan)
+## Email Usage
 
-White-label your emails with a custom domain:
-
-### Benefits
-
-- Professional appearance (rewards@yourdomain.com)
-- Better deliverability with DKIM/SPF
-- Full brand consistency
-- No third-party branding
-
-### Setup Process
-
-1. Add custom domain in settings
-2. Add DNS records to your domain:
-   - SPF record
-   - DKIM record
-   - DMARC record (recommended)
-3. Verify domain
-4. Enable custom domain sending
-
-### Required DNS Records
-
-| Record Type | Name | Value |
-|-------------|------|-------|
-| **TXT (SPF)** | `@` | `v=spf1 include:spf.provider.com ~all` |
-| **CNAME (DKIM)** | `em._domainkey` | `dkim.provider.com` |
-| **TXT (DMARC)** | `_dmarc` | `v=DMARC1; p=quarantine; rua=mailto:...` |
-
-{% hint style="warning" %}
-DNS propagation can take up to 48 hours. Plan ahead when setting up custom domains.
-{% endhint %}
-
----
-
-## Email Templates
-
-### Available Templates
-
-| Template | Trigger | Content |
-|----------|---------|---------|
-| **Tier Upgrade** | Customer reaches new tier | Congratulations, new benefits |
-| **Tier Downgrade** | Customer drops tier | Status change, how to regain |
-| **Cashback Earned** | Order with cashback | Amount earned, balance |
-| **Balance Update** | Manual credit adjustment | New balance, reason |
-| **Welcome** | New program member | Program overview, current tier |
-
-### Template Customization
-
-Each template can be customized:
-
-| Element | Customizable | Notes |
-|---------|--------------|-------|
-| **Subject Line** | Yes | Max 100 characters |
-| **Header Text** | Yes | Main message heading |
-| **Body Content** | Yes | Main content area |
-| **CTA Button** | Yes | Text and link |
-| **Footer** | Yes | Additional info |
-
-### Dynamic Variables
-
-Use these variables in templates:
-
-| Variable | Description | Example Output |
-|----------|-------------|----------------|
-| `{{customer_name}}` | Customer's name | "John" |
-| `{{tier_name}}` | Current tier | "Gold" |
-| `{{cashback_rate}}` | Cashback percentage | "5%" |
-| `{{store_credit}}` | Current balance | "$45.50" |
-| `{{amount_earned}}` | Cashback from order | "$5.00" |
-| `{{next_tier}}` | Next tier name | "Platinum" |
-| `{{spend_needed}}` | Amount to next tier | "$500" |
-
----
-
-## Usage Tracking
-
-### Monthly Email Quota
-
-Email limits based on plan:
-
-| Plan | Monthly Emails |
-|------|----------------|
-| **Max** | 10,000 |
-| **Ultra** | Unlimited |
-
-### Tracking Metrics
-
-Monitor your email usage:
-
-| Metric | Description |
-|--------|-------------|
-| **Emails Sent This Month** | Count since last reset |
-| **Quota Remaining** | Available sends |
-| **Reset Date** | When counter resets |
-| **Last Email Sent** | Timestamp of most recent |
-
-### Approaching Quota
-
-When nearing your limit:
-- Warning at 80% usage
-- Notification at 90% usage
-- Sends pause at 100% (emails queued)
-
-{% hint style="warning" %}
-Queued emails send when quota resets or you upgrade. No emails are lost.
-{% endhint %}
+The **Email Usage** card counts the emails sent this month, split into campaign, automation and transactional emails. RewardsPro is free, and passing the number shown doesn't stop emails.
 
 ---
 
@@ -275,47 +103,19 @@ Queued emails send when quota resets or you upgrade. No emails are lost.
 1. **Verify your domain** - Improves trust with email providers
 2. **Use consistent from address** - Build sender reputation
 3. **Monitor bounce rates** - Remove invalid addresses
-4. **Include unsubscribe link** - Required by law, improves reputation
 
 ### Common Issues
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
 | **Emails going to spam** | Poor sender reputation | Verify domain, warm up sender |
-| **Low open rates** | Weak subject lines | Test different subjects |
 | **High bounces** | Invalid email addresses | Clean customer list |
 | **Not receiving** | Blocked by provider | Check SPF/DKIM records |
-
----
-
-## Troubleshooting
-
-### Emails Not Sending
-
-1. Verify email is enabled in settings
-2. Check API key is valid
-3. Confirm sender email is verified
-4. Check monthly quota hasn't been reached
-5. Review email provider dashboard for errors
-
-### Wrong Branding
-
-1. Clear email template cache
-2. Re-upload logo if needed
-3. Verify color hex code format
-4. Check preview before sending
-
-### Provider Connection Failed
-
-1. Verify API key/credentials
-2. Check provider service status
-3. Ensure correct provider selected
-4. Test with provider's own tools
 
 ---
 
 ## Related Guides
 
 - [Widget Settings](widget-settings.md) - Customer-facing branding
-- [Tier Automation](tier-automation.md) - Trigger tier change emails
+- [Tier Automation](tier-automation.md) - How tiers are recalculated
 - [Store Settings](store-settings.md) - Store information for emails

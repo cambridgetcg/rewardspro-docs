@@ -19,6 +19,4 @@ prove payment or entitlement.
   retain the original transaction and adjustment history.
 
 For recurring agreements, see [tier subscriptions](tier-subscriptions.md).
-For app billing, see [existing plans](../billing/plans.md).
-
-The former product-creation and sales playbook is [retired history](../docs/history/retired-commercial-direction-2026-09-24/advanced-features__tier-products.md.txt), not a current offer or instruction to launch memberships.
+RewardsPro itself is free: see the [price question in Resources](https://docs.rewardspro.io/documentation/resources).

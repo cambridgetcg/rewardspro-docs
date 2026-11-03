@@ -20,6 +20,7 @@ You've set up and tested your loyalty program. Use this final checklist to ensur
 - [ ] **Historical Data Synced**: Existing customers have correct tiers
 - [ ] **VIPs Assigned**: Top customers recognized appropriately
 - [ ] **Tier Automation Enabled**: Automatic recalculation active
+- [ ] **Automatic Cashback On**: Cashback on paid orders is issued as store credit without you doing it by hand
 - [ ] **Evaluation Period Set**: Annual or Lifetime (matches your sync)
 
 ### Settings ✓
@@ -32,6 +33,7 @@ You've set up and tested your loyalty program. Use this final checklist to ensur
 
 - [ ] **Test Order Placed**: Cashback calculated correctly
 - [ ] **Customer Balance Updated**: Store credit appeared
+- [ ] **Credit Spent at Checkout**: A signed-in test customer applied their store credit at checkout, and the balance went down in Shopify and RewardsPro
 - [ ] **Tier Upgrade Tested**: Customers promote correctly
 - [ ] **Refund Tested**: Cashback reverses properly
 
@@ -48,9 +50,15 @@ You've set up and tested your loyalty program. Use this final checklist to ensur
 
 ### Customer Account
 
-- [ ] **Balance Visible**: Customers can see their store credit
-- [ ] **Tier Displayed**: Current tier is shown
+- [ ] **Customer Accounts, Not Legacy**: Customers sign in with Shopify customer accounts. Store credit isn't available with legacy customer accounts
+- [ ] **Balance Visible**: Signed-in customers can see their store credit
+- [ ] **Tier Displayed**: Current tier is shown in the widget
 - [ ] **Progress Clear**: Path to next tier is visible
+
+### Store Credit Rules You've Checked
+
+- [ ] **How to Spend**: Customers spend store credit at checkout when signed in or paying with Shop Pay, and Shopify applies the full balance
+- [ ] **Shopify's Fee**: If your store was created on or after 12 May 2025, you know Shopify charges its third-party transaction fee on the part of an order paid with store credit, even with Shopify Payments. See [Installation](installation.md#shopifys-fee-on-store-credit)
 
 ---
 
@@ -82,8 +90,9 @@ Earn cashback on every purchase:
 • Gold: 6% back
 • Platinum: 10% back
 
-Your rewards start automatically -
-no sign-up needed!
+Your rewards start automatically.
+Sign in to your account at checkout
+to spend them.
 ```
 
 ---
@@ -170,7 +179,7 @@ no sign-up needed!
 
 - [ ] Monitor tier progression
 - [ ] Review cashback rates vs margins
-- [ ] Consider promotional campaigns
+- [ ] Remind customers how to spend their store credit
 - [ ] Plan ongoing communication
 
 ### Month 2+
@@ -216,7 +225,7 @@ Congratulations on launching your loyalty program!
 
 ### Need Help?
 
-- **Questions?** Email support@rewardspro.io
+- **Questions?** Email contact@rewardspro.io
 - **Issues?** Check [Common Setup Mistakes](common-setup-mistakes.md)
 - **Feature Requests?** Let us know!
 

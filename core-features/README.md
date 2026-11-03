@@ -98,7 +98,7 @@ Tier progress updated
 |-------|-------------------|
 | [Access Store Credits](store-credit/access-store-credits.md) | How customers see balance |
 | [Refund to Credit](store-credit/refund-to-credit.md) | Handle refunds as credit |
-| [Expiration Dates](store-credit/expiration-dates.md) | Configure credit expiry |
+| [Expiration Dates](store-credit/expiration-dates.md) | Credit expiry (RewardsPro doesn't set one) |
 
 ---
 

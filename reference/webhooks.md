@@ -16,7 +16,7 @@ RewardsPro uses Shopify webhooks to process events in real-time. All webhooks ar
 
 **Actions:**
 1. Identify customer from order email
-2. Calculate eligible amount (subtotal - discounts)
+2. Calculate eligible amount (amount paid, not counting store credit or gift cards, minus gift card and tier products)
 3. Apply customer's tier cashback rate
 4. Create ledger entry (CASHBACK_EARNED)
 5. Update customer balance

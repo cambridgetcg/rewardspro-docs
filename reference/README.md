@@ -45,7 +45,7 @@ In-depth technical documentation covering how RewardsPro works under the hood, d
 </tr>
 <tr>
 <td><strong>Multi-Currency</strong></td>
-<td>32 supported currencies and exchange rates</td>
+<td>32 supported currencies, and store credit at checkout</td>
 <td><a href="multi-currency.md">multi-currency.md</a></td>
 </tr>
 </tbody>
@@ -105,7 +105,7 @@ Event-driven notifications (14 webhook types):
 
 ### 32 Supported Currencies
 How RewardsPro handles different currencies:
-- Exchange rate management
+- Store-currency amounts from Shopify
 - Display formatting options
 - Conversion examples
 

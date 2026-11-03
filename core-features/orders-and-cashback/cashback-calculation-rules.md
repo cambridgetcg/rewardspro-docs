@@ -4,31 +4,32 @@ description: Understand exactly how cashback amounts are calculated
 
 # Cashback Calculation Rules
 
-RewardsPro uses a consistent formula to calculate cashback on every order. Understanding these rules helps you configure tiers effectively and explain rewards to customers.
+RewardsPro uses the same formula on every paid order. Knowing it helps you set tier rates and explain rewards to customers.
 
 ---
 
 ## The Cashback Formula
 
 ```
-Cashback Amount = (subtotalPrice - totalDiscounts) × (cashbackPercent / 100)
+Cashback = (amount paid, not counting store credit or gift cards
+            - gift card products and tier products in the order)
+           × (cashbackPercent / 100)
 ```
 
 ### Variables Explained
 
-| Variable | Description | From Order Data |
-|----------|-------------|-----------------|
-| **subtotalPrice** | Sum of line item prices before any adjustments | Order.subtotalPrice |
-| **totalDiscounts** | All discounts applied to the order | Order.totalDiscounts |
-| **cashbackPercent** | Customer's tier percentage at time of order | Tier.cashbackPercent |
-| **cashbackAmount** | Final credit earned (stored on order) | Order.cashbackAmount |
+| Variable | Description |
+|----------|-------------|
+| **Amount paid** | What the customer paid by card or another payment method, as Shopify records it in your store currency. The part paid with store credit or a gift card doesn't count |
+| **Gift card and tier products** | Gift cards and tier products bought in the order are taken off |
+| **cashbackPercent** | The cashback rate of the customer's tier |
 
 ### Important Notes
 
-- **Shipping and tax are NOT included** in cashback calculation
-- **Discounts are subtracted** before calculating cashback
-- **Tier rate is locked** at the time of order (stored as `cashbackPercentAtOrder`)
-- **Cashback is rounded** to 2 decimal places
+- **Shipping and tax are included**, because they're part of what the customer paid
+- **Discounts lower the cashback**, because they lower what the customer paid
+- **Store credit and gift card payments earn nothing**, so spending cashback doesn't earn more cashback
+- **Cashback is rounded** to the cent
 
 ### Calculation Example
 
@@ -36,82 +37,45 @@ Cashback Amount = (subtotalPrice - totalDiscounts) × (cashbackPercent / 100)
 
 | Field | Amount |
 |-------|--------|
-| subtotalPrice | $150.00 |
-| totalDiscounts | $20.00 |
-| totalShipping | $10.00 |
-| totalTax | $12.00 |
-| **totalPrice** | **$152.00** |
+| Subtotal | $150.00 |
+| Discounts | -$20.00 |
+| Shipping | $10.00 |
+| Tax | $12.00 |
+| **Total paid by card** | **$152.00** |
 
 **Cashback Calculation:**
 ```
-Eligible Amount = $150.00 - $20.00 = $130.00
+Eligible Amount = $152.00 (everything paid by card)
 Cashback Rate = 5% (Gold tier)
-Cashback = $130.00 × 0.05 = $6.50
+Cashback = $152.00 × 0.05 = $7.60
 ```
 
-The customer earns **$6.50** in store credit, even though the order total was $152.00.
+The customer earns **$7.60** in store credit.
+
+If the same customer had paid $50.00 of that order with store credit and $102.00 by card, only the card payment would count: $102.00 × 0.05 = $5.10.
 
 ---
 
 ## What's Included
 
-### ✅ Included in Calculation
+### ✅ Counts Toward Cashback
 
 | Item | Explanation |
 |------|-------------|
-| **Product prices** | Base price of items |
-| **Variant prices** | Size, color variations |
-| **After discounts** | Calculate on discounted price |
-| **Bundle products** | Full bundle price |
-| **Pre-order items** | When payment collected |
+| **Product prices** | After any discounts, as the customer paid them |
+| **Shipping** | Part of what the customer paid |
+| **Tax** | Part of what the customer paid |
 
-### ❌ Excluded from Calculation
+### ❌ Doesn't Count
 
 | Item | Reason |
 |------|--------|
-| **Shipping costs** | Not product value |
-| **Taxes** | Government fees |
-| **Tips** | Not merchandise |
-| **Gift cards** | Already a stored value |
-| **Excluded products** | If configured |
+| **Payments with store credit** | Spending cashback doesn't earn cashback |
+| **Payments with gift cards** | Already a stored value |
+| **Gift card products** | Taken off, so buying a gift card earns nothing |
+| **Tier products** | A membership purchase doesn't earn cashback on itself |
 
----
-
-## Discount Handling
-
-### Order-Level Discounts
-
-Discounts that apply to the entire order:
-- Percentage off (e.g., 20% off)
-- Fixed amount off (e.g., $25 off)
-- Free shipping (no effect on cashback)
-
-**Calculation:**
-```
-Subtotal: $200.00
-20% discount: -$40.00
-Eligible: $160.00
-```
-
-### Item-Level Discounts
-
-Discounts that apply to specific items:
-- Sale prices
-- Buy X Get Y promotions
-- Automatic discounts
-
-**Calculation:**
-```
-Item 1: $100.00 (full price)
-Item 2: $50.00 (was $80, on sale)
-Eligible: $150.00 (uses sale price)
-```
-
-### Stacked Discounts
-
-When multiple discounts apply:
-- All discounts are subtracted
-- Cashback calculated on final amount
+There's no setting to leave out other products or collections.
 
 ---
 
@@ -119,24 +83,18 @@ When multiple discounts apply:
 
 ### Finding the Rate
 
-1. Identify the customer
+1. Identify the customer on the order
 2. Look up their current tier
 3. Get the tier's cashback percentage
-4. Apply to eligible amount
+4. Apply it to the eligible amount
 
 ### Tier at Time of Order
 
-**Important:** Cashback uses the tier at **order time**, not current tier.
+Cashback uses the tier the customer has when RewardsPro processes the paid order. If the spending in that order moves them up a tier, the order still earns at their previous tier. The new rate applies from their next order.
 
-**Example:**
-- Customer was Silver (3%) when ordering
-- Upgraded to Gold (5%) the next day
-- Cashback on that order = 3% (Silver rate)
+A customer who has no tier yet is placed in one first, using this order's spending, and the order earns at that tier.
 
-This ensures:
-- Accurate historical records
-- Fair tier progression
-- No retroactive changes
+The rate is saved with each cashback entry, so later tier changes don't change cashback already earned.
 
 ---
 
@@ -148,134 +106,53 @@ No cashback is awarded when:
 
 | Scenario | Result |
 |----------|--------|
-| Guest checkout | $0 (no customer account) |
-| No tier assigned | $0 (assign default tier) |
-| All items excluded | $0 (nothing eligible) |
-| Below minimum order | $0 (if threshold set) |
-| Zero subtotal | $0 (free order) |
+| No customer on the order | $0 |
+| The customer doesn't qualify for any tier | $0 |
+| Paid entirely with store credit or gift cards | $0 |
+| Only gift cards or tier products in the order | $0 |
+| Refunded in full before the cashback was recorded | $0 |
 
 ### Rounding
 
-Cashback is rounded to **2 decimal places**:
-- $6.504 → $6.50
-- $6.505 → $6.51
-- $6.506 → $6.51
-
-Standard banker's rounding is used.
+Cashback is rounded to the cent.
 
 ### Multi-Currency
 
-For stores with multiple currencies:
-
-1. Order placed in customer's currency
-2. Converted to store currency (if different)
-3. Cashback calculated in store currency
-4. Credited in store currency
+Shopify records each payment in your store currency as well as in the customer's currency. RewardsPro uses the amount in your store currency, and issues the cashback in your store currency.
 
 **Example:**
 ```
-Order: €100.00 EUR
-Exchange rate: 1 EUR = $1.10 USD
-Converted: $110.00 USD
+Order paid by card: €100.00 EUR
+Shopify's amount in your store currency: $108.00 USD
 Tier rate: 5%
-Cashback: $5.50 USD
+Cashback: $5.40 USD
 ```
 
 ---
 
-## Product Exclusions
+## Refunds
 
-### Excluding Specific Products
-
-Some products may not earn cashback:
-- Gift cards
-- Donations
-- Service fees
-- Sale/clearance items (optional)
-
-**Configuration:**
-1. Go to **Settings** → **Cashback Rules**
-2. Add products or collections to exclude
-3. These items won't count toward cashback
-
-### Excluding Collections
-
-Entire collections can be excluded:
-- Create "No Cashback" collection
-- Add products to it
-- Configure exclusion in settings
-
----
-
-## Order Scenarios
-
-### Standard Order
-
-```
-Products: $100.00
-Tier: Silver (3%)
-Cashback: $3.00
-```
-
-### Discounted Order
-
-```
-Products: $100.00
-Discount: -$20.00
-Tier: Silver (3%)
-Eligible: $80.00
-Cashback: $2.40
-```
-
-### Partial Exclusion
-
-```
-Product A: $75.00 (eligible)
-Product B: $25.00 (gift card - excluded)
-Tier: Gold (5%)
-Eligible: $75.00
-Cashback: $3.75
-```
-
-### Mixed Currency
-
-```
-Order: £80.00 GBP
-Store currency: USD
-Exchange rate: 1.25
-Converted: $100.00 USD
-Tier: Gold (5%)
-Cashback: $5.00 USD
-```
+When an order is refunded, RewardsPro takes back the refunded share of its cashback, up to the store credit the customer still holds. Credit already spent isn't taken back.
 
 ---
 
 ## Verifying Calculations
 
-### In Order Details
-
-Each processed order shows:
-- Order subtotal
-- Discounts applied
-- Tier at time of order
-- Calculated cashback
-- Any exclusions
-
 ### In Transaction History
 
-Customer ledger shows:
-- Cashback amount
-- Reference to order
-- Tier information
-- Timestamp
+The customer's store credit history shows each cashback entry with:
+- The cashback amount
+- The order it came from
+- The tier rate used
+- The date
 
 ### Audit Trail
 
 For disputes:
-1. Check order total and discounts
-2. Verify tier at time of order
-3. Check for excluded products
-4. Recalculate manually if needed
+1. Check how the order was paid in Shopify: by card, store credit or gift card
+2. Check for gift cards or tier products in the order
+3. Verify the customer's tier at the time of the order
+4. Recalculate with the formula above
 
 ---
 
@@ -292,7 +169,7 @@ For disputes:
 
 ### Margin Consideration
 
-Ensure cashback is sustainable:
+Cashback is paid on shipping and tax too, so work out your rates on the full amount customers pay:
 ```
 Profit margin: 40%
 Max sustainable cashback: ~15-20% of margin
@@ -303,6 +180,6 @@ Example: 40% × 15% = 6% max cashback
 
 Help customers understand:
 - How cashback is calculated
-- What's included/excluded
+- That paying with store credit or a gift card earns no cashback
 - When credit is issued
 - How to check their balance

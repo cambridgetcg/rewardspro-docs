@@ -33,7 +33,7 @@ RewardsPro tracks comprehensive data for each customer:
 | Field | Description |
 |-------|-------------|
 | **storeCredit** | Current available store credit balance |
-| **pointsBalance** | Current loyalty points balance |
+| **pointsBalance** | Current loyalty points balance (points aren't available yet) |
 | **lifetimePoints** | Total points ever earned |
 | **totalSpent** | All-time order value |
 | **annualSpent** | Spending in last 12 months (for tier calculation) |

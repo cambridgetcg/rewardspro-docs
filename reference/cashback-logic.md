@@ -16,24 +16,29 @@ Cashback = Eligible Amount × Tier Rate
 
 ### Starting Point
 
-Begin with **order subtotal** (line items total).
+Begin with the order's successful payments (sales and captures), as Shopify records them in your store currency.
 
 ### Adjustments
 
 | Step | Calculation |
 |------|-------------|
-| 1. Line items | Sum of (price × quantity) |
-| 2. Discounts | Subtract discount amounts |
-| 3. Excluded items | Remove non-qualifying products |
+| 1. Payments | Add up the order's payments by card or other payment methods |
+| 2. Store credit and gift cards | Leave out payments made with store credit or gift cards |
+| 3. Excluded products | Take off gift card products and tier products in the order |
 | = Eligible Amount | Final amount for cashback |
+
+### What's Included
+
+- Product prices, after discounts
+- Shipping charges
+- Tax amounts
 
 ### What's NOT Included
 
-- Shipping charges
-- Tax amounts
-- Tips
-- Gift cards
-- Excluded products/collections
+- The part paid with store credit
+- The part paid with gift cards
+- Gift card products
+- Tier products
 
 ## Tier Rate Application
 
@@ -51,46 +56,40 @@ Order Details:
 - Discount: -$20.00
 - Shipping: $10.00
 - Tax: $12.00
-- Total: $152.00
+- Total: $152.00, paid by card
 
-Eligible Amount: $150 - $20 = $130.00
+Eligible Amount: $152.00
 Customer Tier: Gold (5%)
-Cashback: $130 × 0.05 = $6.50
+Cashback: $152 × 0.05 = $7.60
 ```
+
+If $50.00 of the same order had been paid with store credit, the eligible amount would be $102.00 and the cashback $5.10.
 
 ## Edge Cases
 
 ### Zero Cashback Scenarios
 
 No cashback awarded when:
-- Order total is $0
-- All items excluded
-- Below minimum threshold
-- Customer has no account
+- The order is paid entirely with store credit or gift cards
+- The order has only gift card or tier products
+- The customer doesn't qualify for any tier
+- The order has no customer
 
 ### Rounding
 
-Cashback is rounded to 2 decimal places:
-- $6.504 → $6.50
-- $6.505 → $6.51
+Cashback is rounded to the cent.
 
 ### Multi-Currency Orders
 
 For stores with multiple currencies:
-1. Order is in customer's currency
-2. Converted to store currency
-3. Cashback calculated in store currency
-4. Credited in store currency
+1. The customer pays in their currency
+2. Shopify also records the payment in your store currency
+3. Cashback is calculated on the store-currency amount
+4. Cashback is credited in store currency
 
 ## Discount Handling
 
-### Order-Level Discounts
-
-Applied proportionally across all items.
-
-### Item-Level Discounts
-
-Applied to specific items only.
+Discounts lower what the customer pays, so they lower the cashback.
 
 ### Discount Code Types
 
@@ -98,28 +97,30 @@ Applied to specific items only.
 |------|----------|
 | Percentage off | Reduces eligible amount |
 | Fixed amount off | Reduces eligible amount |
-| Free shipping | No effect on cashback |
-| Buy X Get Y | Reduced on free items |
+| Free shipping | No shipping is paid, so none counts |
+| Buy X Get Y | Free items earn nothing |
 
 ## Refund Impact
+
+A refund takes back its share of the cashback: the refunded amount divided by the order total. A refund that completes the order takes back whatever is left. RewardsPro takes it from the customer's store credit only up to what they still hold. Credit already spent isn't taken back.
 
 ### Full Refund
 
 ```
-Original cashback: $6.50
+Original cashback: $7.60
 Refund: Full order
-Reversed: $6.50
+Reversed: $7.60
 Net cashback: $0.00
 ```
 
 ### Partial Refund
 
 ```
-Original order: $130.00
-Original cashback: $6.50
-Refund: $50.00 (38.5% of order)
-Reversed: $6.50 × 0.385 = $2.50
-Net cashback: $4.00
+Order total: $152.00
+Original cashback: $7.60
+Refund: $50.00
+Reversed: $7.60 × 50 / 152 = $2.50
+Net cashback: $5.10
 ```
 
 ## Processing Timeline
@@ -130,5 +131,5 @@ Net cashback: $4.00
 | Payment confirmed | Seconds to minutes |
 | Webhook received | < 30 seconds |
 | Cashback calculated | < 1 second |
-| Credit applied | Immediate |
-| Customer sees balance | Real-time |
+| Credit applied | Straight away with Automatic Cashback on; otherwise when you issue it |
+| Customer sees balance | Once the credit is in Shopify |

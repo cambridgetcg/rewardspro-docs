@@ -84,7 +84,7 @@ When an order is marked as paid:
 4. **Calculate cashback**:
    - Get customer's current tier
    - Apply tier's cashback percentage
-   - Calculate: (subtotal - discounts) × rate
+   - Calculate: (amount paid, not counting store credit or gift cards, minus gift card and tier products) × rate
 5. **Create ledger entry** (CASHBACK_EARNED)
 6. **Update customer balance**
 7. **Check tier upgrade** (if real-time enabled)

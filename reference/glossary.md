@@ -72,13 +72,13 @@ The accounting system RewardsPro uses where every store credit transaction has b
 ## E
 
 ### Eligible Amount
-The portion of an order that qualifies for cashback calculation. Typically: subtotal minus discounts, excluding shipping, tax, and excluded products.
+The portion of an order that qualifies for cashback calculation: what the customer paid, including shipping and tax, minus any part paid with store credit or gift cards, and minus gift card and tier products in the order.
 
 ### Evaluation Period
 The timeframe used to calculate customer spending for tier qualification. Values: ANNUAL (rolling 12 months) or LIFETIME (all-time).
 
 ### Exchange Rate
-The conversion rate between currencies, updated daily from exchange rate providers. Used when orders are placed in currencies different from the store's base currency.
+The conversion rate between currencies. For an order paid in another currency, RewardsPro uses the amount Shopify records in the store's base currency, so it doesn't apply exchange rates of its own.
 
 ---
 
@@ -124,7 +124,7 @@ The category of a store credit transaction:
 A tier calculation method where all-time spending counts toward tier qualification. Customers never downgrade based on spending alone.
 
 ### Lifetime Points
-The total points a customer has ever earned, regardless of redemptions. Used for tracking program engagement.
+The total points a customer has ever been given. Points aren't available yet: customers can't spend them or turn them into store credit.
 
 ---
 
@@ -164,7 +164,7 @@ The sum of line item prices before shipping, tax, tips, and after line-item disc
 ## P
 
 ### Points Balance
-Current available points a customer can redeem, distinct from store credit balance.
+The points a customer holds, separate from their store credit balance. Points aren't available yet: customers can't spend them or turn them into store credit.
 
 ### Product Duration
 How long tier access lasts when purchased via a tier product. Values: MONTHLY (30 days), ANNUAL (365 days), or LIFETIME (permanent).
@@ -186,7 +186,7 @@ How a tier product can be acquired. Values: ONE_TIME, SUBSCRIPTION, or BOTH.
 How often the system automatically evaluates and updates customer tiers. Values: DAILY, WEEKLY, MONTHLY, or QUARTERLY.
 
 ### Redemption
-Using store credit to pay for a purchase, creating a debit ledger entry.
+Using store credit to pay for a purchase, creating a debit ledger entry. Shopify applies the customer's full store credit balance; customers can't choose a partial amount.
 
 ### Redemption Rate
 The percentage of issued store credit that customers have used. A key metric for program health.
@@ -205,7 +205,7 @@ The unique identifier assigned by Shopify to each customer account. Used to link
 See "Minimum Spend."
 
 ### Store Credit
-A monetary balance customers can use toward future purchases. Earned through cashback or added manually by merchants.
+A monetary balance customers can use toward future purchases, held in Shopify. Earned through cashback or added manually by merchants. Customers spend it at checkout when signed in through Shopify customer accounts (not legacy customer accounts) or paying with Shop Pay.
 
 ### Subscription Status
 The state of a tier subscription. Values: PENDING, ACTIVE, PAUSED, CANCELLED, EXPIRED, or FAILED.

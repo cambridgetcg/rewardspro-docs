@@ -44,28 +44,6 @@ Retrieves loyalty data for the current customer.
 }
 ```
 
-### Get Locales
-
-Retrieves translation strings for the widget.
-
-**Endpoint:** `GET /apps/rewardspro/locales/{locale}`
-
-**Parameters:**
-- `locale`: Language code (en, fr, es, de)
-
-**Response:**
-```json
-{
-  "widget": {
-    "title": "Your Rewards",
-    "balance": "Store Credit",
-    "tier": "Your Tier",
-    "progress": "Progress to {tier}",
-    "earn": "Earn {rate}% cashback"
-  }
-}
-```
-
 ## Internal APIs
 
 These APIs are used internally by the app.
@@ -88,7 +66,6 @@ These APIs are used internally by the app.
 | Endpoint | Limit |
 |----------|-------|
 | Widget API | 100/minute |
-| Locales API | 60/minute |
 
 ## Error Responses
 

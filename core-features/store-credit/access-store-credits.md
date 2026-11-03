@@ -89,6 +89,10 @@ Each ledger entry has a sync status with Shopify:
 
 ## Using Store Credit at Checkout
 
+{% hint style="info" %}
+**Who can spend store credit**: Shopify lets customers spend store credit at checkout only when signed in through customer accounts, or when paying with Shop Pay. Store credit isn't available with legacy customer accounts. See [Installation](../../getting-started/installation.md) for Shopify's rules and its fee on store credit.
+{% endhint %}
+
 ### Step 1: View Available Credit
 
 <figure><img src="../.gitbook/assets/Customer_Checkout_1.png" alt="Checkout page showing store credit option"><figcaption>Store credit appears as a payment option</figcaption></figure>
@@ -102,10 +106,10 @@ At checkout, customers see:
 
 <figure><img src="../.gitbook/assets/Customer_Checkout_2.png" alt="Store credit being applied at checkout"><figcaption>Credit is automatically deducted from total</figcaption></figure>
 
-**Application options:**
-- Apply full balance
-- Apply partial amount
-- Combine with other payment
+**How Shopify applies it:**
+- Shopify applies the customer's full store credit balance
+- Customers can't choose a partial amount
+- The rest of the order is paid another way
 
 **What happens:**
 1. Customer clicks "Apply Store Credit"
@@ -131,10 +135,7 @@ At checkout, customers see:
 
 ### In Account
 
-Customers see on their account page:
-- Current balance
-- Recent transactions
-- Link to full history
+Store credit shows natively in Shopify customer accounts. Signed-in customers see their balance there. Legacy customer accounts don't show store credit.
 
 ### In Checkout
 
@@ -149,16 +150,13 @@ During checkout:
 
 ### Store Currency
 
-- Credit is stored in store currency
+- RewardsPro issues cashback as store credit in your store currency
 - Displayed in store currency format
 - Proper symbol and decimal handling
 
 ### Multi-Currency Stores
 
-If your store uses multiple currencies:
-- Credit stored in base currency
-- Displayed in customer's local currency
-- Converted at current rates
+Shopify shows a customer only the store credit balance that matches the currency of their checkout. A customer checking out in another currency won't see store credit issued in your store currency.
 
 ---
 
@@ -205,7 +203,7 @@ If your store uses multiple currencies:
 
 ### Can't Apply at Checkout
 
-1. Ensure sufficient balance
-2. Check for minimum order requirements
-3. Verify checkout settings
-4. Test with admin account
+1. Check the customer is signed in through customer accounts, or paying with Shop Pay
+2. Check your store doesn't use legacy customer accounts (**Shopify Admin** → **Settings** → **Customer accounts**)
+3. Check the checkout currency matches the currency of the customer's balance
+4. Store credit can't pay for draft orders, edited orders or recurring subscription payments

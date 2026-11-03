@@ -13,6 +13,8 @@ Before you start testing, confirm:
 - [ ] At least 2 tiers are created
 - [ ] One tier is set as the default
 - [ ] Tier automation is enabled
+- [ ] **Automatic Cashback** is on (dashboard → **Features**)
+- [ ] Customers sign in with customer accounts, not legacy customer accounts (**Shopify Admin** → **Settings** → **Customer accounts**)
 - [ ] Historical data has been synced (if applicable)
 
 ---
@@ -63,7 +65,7 @@ This is the most important test. Place a real order to verify cashback works.
 ### Step-by-Step
 
 1. **Create a test product** (or use an existing low-cost item)
-2. **Place an order** using a test customer email you control
+2. **Place an order** signed in as a test customer whose email you control
 3. **Complete payment** (use Shopify's test mode if available)
 4. **Wait 1-2 minutes** for webhook processing
 5. **Check RewardsPro** for the order
@@ -74,7 +76,7 @@ This is the most important test. Place a real order to verify cashback works.
 |-------|------------------|
 | Order appears | Listed in Orders page |
 | Cashback calculated | Shows correct percentage of order |
-| Customer balance updated | Store credit increased |
+| Customer balance updated | Store credit increased, in RewardsPro and on the customer in Shopify admin |
 | Ledger entry created | Transaction in customer history |
 
 ### If Using Shopify Payments Test Mode
@@ -86,7 +88,39 @@ This is the most important test. Place a real order to verify cashback works.
 
 ---
 
-## Test 4: Tier Upgrade
+## Test 4: Spend Store Credit at Checkout
+
+Customers spend their cashback at checkout, so test that too. Use the test customer from Test 3 once their cashback shows as store credit.
+
+### Before You Start
+
+- Customers sign in with customer accounts, not legacy customer accounts. Store credit isn't available with legacy accounts.
+- The test customer has a store credit balance in Shopify. Open the customer in your Shopify admin to check.
+
+### How to Test
+
+1. On your storefront, add products worth more than the test customer's balance
+2. At checkout, sign in as the test customer (or pay with Shop Pay)
+3. Apply the store credit
+4. Pay the rest and complete the order
+
+### Expected Results
+
+| Check | What to Look For |
+|-------|------------------|
+| Store credit offered | Checkout offers the customer's store credit |
+| Full balance applied | Shopify applies the full balance. There's no way to choose part of it |
+| Shopify balance | The customer's store credit in Shopify admin went down by the amount used |
+| RewardsPro balance | The customer in RewardsPro shows the same balance as Shopify, and their store credit history has a **Payment** entry |
+| Cashback on this order | Only the part paid by card earns cashback. The part of the order paid with store credit (or a gift card) earns no cashback |
+
+{% hint style="warning" %}
+**Store credit not offered at checkout?** Check that the customer is signed in through customer accounts (not legacy accounts) or paying with Shop Pay, and that the checkout currency matches the currency of their balance.
+{% endhint %}
+
+---
+
+## Test 5: Tier Upgrade
 
 Test that customers upgrade when they cross thresholds.
 
@@ -108,7 +142,7 @@ If you can't wait for automatic recalculation:
 
 ---
 
-## Test 5: Customer Widget (If Enabled)
+## Test 6: Customer Widget (If Enabled)
 
 ### What to Check
 
@@ -137,13 +171,17 @@ If you can't wait for automatic recalculation:
 
 ---
 
-## Test 6: Refund Handling
+## Test 7: Refund Handling
 
 Test that refunds properly reverse cashback.
 
+{% hint style="info" %}
+RewardsPro takes back refunded cashback only from store credit the customer still holds. Credit already spent isn't taken back. For this test, use an order whose cashback the customer hasn't spent, such as a new test order.
+{% endhint %}
+
 ### How to Test
 
-1. Using your test order, process a refund in Shopify
+1. Using that test order, process a refund in Shopify
 2. Wait 1-2 minutes for webhook
 3. Check RewardsPro:
    - Customer balance should decrease
@@ -151,21 +189,24 @@ Test that refunds properly reverse cashback.
 
 ---
 
-## Test 7: Email Notifications (If Configured)
+## Test 8: Email Notifications
 
-If you've set up email notifications:
+RewardsPro sends some emails to customers on its own. The welcome and tier upgrade emails start once you've saved your email settings. See [Email Settings](../configuration/email-settings.md) for when each email is sent and what it says.
 
 ### What to Check
 
-- [ ] Welcome email sends on signup
-- [ ] Tier upgrade email sends on promotion
-- [ ] Cashback earned email sends on order
+- [ ] Welcome email arrives when you create a test customer in Shopify
+- [ ] Tier upgrade email arrives when a paid order moves the test customer up a tier
+- [ ] The From name and Reply-To address are the ones you set
+
+The tier downgrade email is sent only when a paid order moves a customer down a tier. Refunds, tier changes you make by hand and scheduled recalculation don't send it.
 
 ### How to Test
 
-1. Use a real email address you can access
-2. Trigger each notification type
-3. Verify emails arrive and look correct
+1. Save your settings on **Marketing** → **Settings** first
+2. Create a test customer in Shopify with a real email address you can access
+3. Place a paid order for that customer that crosses a tier threshold
+4. Verify the emails arrive and look correct
 
 ---
 
@@ -176,6 +217,7 @@ If you've set up email notifications:
 - [ ] Tiers display correctly
 - [ ] Test order processes cashback
 - [ ] Customer balance updates
+- [ ] Store credit can be spent at checkout
 - [ ] Ledger shows transactions
 
 ### Should Pass ✓
@@ -209,14 +251,13 @@ If you've set up email notifications:
 ### Wrong Cashback Amount
 
 **Causes:**
-- Discounts not accounted for
+- Part of the order was paid with store credit or a gift card, which earns no cashback
+- The order includes gift cards or tier products, which earn no cashback
 - Wrong tier assigned
-- Shipping/tax inclusion settings
 
 **Solutions:**
-1. Check what's included in cashback calculation
+1. Check what counts, in [Cashback Calculation Rules](../core-features/orders-and-cashback/cashback-calculation-rules.md). Shipping and tax count, because they're part of what the customer paid
 2. Verify customer's tier
-3. Review cashback settings
 
 ### Customer Not Upgrading
 

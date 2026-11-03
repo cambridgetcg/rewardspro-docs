@@ -92,16 +92,16 @@ Every credit change is logged:
 
 Customers can apply store credit:
 1. View balance in widget
-2. At checkout, credit is available
-3. Apply full or partial amount
+2. At checkout, sign in through customer accounts or pay with Shop Pay. Store credit isn't available with legacy customer accounts
+3. Apply the store credit. Shopify applies the full balance; customers can't choose a partial amount
 4. Remaining paid by card
 
 ### Balance Display
 
 Customers see their balance in:
 - Customer widget
-- Account page
-- Checkout (if available)
+- Shopify customer account (customer accounts, not legacy)
+- Checkout, when signed in or paying with Shop Pay
 
 ## Best Practices
 
