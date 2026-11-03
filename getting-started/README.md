@@ -48,10 +48,10 @@ Welcome to RewardsPro! This guide will help you set up your loyalty program quic
 For merchants who want to get started immediately:
 
 ### Step 1: Install & Open
-Install RewardsPro from the Shopify App Store and open the app.
+Install [RewardsPro from the Shopify App Store](https://apps.shopify.com/rewards-pro) and open the app. It's free.
 
 ### Step 2: Create Your First Tier
-Go to **Membership Tiers** → **Create Tier**:
+Go to **Customers** → **Tiers** and create a tier:
 - Name: "Bronze" (or your preferred name)
 - Minimum Spend: $0
 - Cashback Rate: 2%
@@ -62,14 +62,20 @@ Create at least one upgrade tier:
 - Minimum Spend: $500
 - Cashback Rate: 4%
 
-### Step 4: Enable Automation
+### Step 4: Turn On Automatic Cashback
+On the dashboard, turn on **Automatic Cashback**. While it's off, cashback waits on the **Orders** page for you to issue.
+
+### Step 5: Enable Automation
 Go to **Settings** → **Tier Automation** and enable automatic tier recalculation.
 
-### Step 5: You're Live!
-New orders will now earn cashback automatically.
+### Step 6: Turn On the Widget
+In your theme editor, turn on the **RewardsPro Widget** app embed and save, so customers can see their tier and store credit.
+
+### Step 7: You're Live!
+New paid orders now earn cashback as Shopify store credit.
 
 {% hint style="success" %}
-**That's it!** Your basic loyalty program is now active. Customers will earn cashback based on their tier.
+**That's it!** Your basic loyalty program is now active. Customers earn cashback based on their tier, and spend it at checkout when signed in through customer accounts or paying with Shop Pay. See [Installation](installation.md) for Shopify's store credit rules.
 {% endhint %}
 
 ---
@@ -116,6 +122,6 @@ Once your loyalty program is live:
 ## Need Help?
 
 - **Stuck on a step?** Check [Common Setup Mistakes](common-setup-mistakes.md)
-- **Questions?** Email support@rewardspro.io
+- **Questions?** Email contact@rewardspro.io
 - **Want to customize?** See the [Configuration](../configuration/) section
 

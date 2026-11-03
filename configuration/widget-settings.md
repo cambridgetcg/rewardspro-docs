@@ -134,7 +134,6 @@ Customize the trigger button text:
 |---------|-------------|
 | "Rewards" | "My Rewards" |
 | | "VIP Status" |
-| | "Loyalty Points" |
 | | "Member Benefits" |
 | | Your custom text |
 

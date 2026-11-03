@@ -337,7 +337,7 @@ If something's wrong, check these first:
 
 If you've checked everything and still have issues:
 
-1. **Email Support**: support@rewardspro.io
+1. **Email Support**: contact@rewardspro.io
 2. **Include Details**:
    - Your store URL
    - What you expected to happen

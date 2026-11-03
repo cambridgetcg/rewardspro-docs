@@ -10,8 +10,8 @@ Control which features are active in your RewardsPro installation. Feature toggl
 
 ## Accessing Feature Toggles
 
-1. Go to **Settings** in the main navigation
-2. Select the **Features** tab
+1. Open the RewardsPro dashboard (**Home**)
+2. Find the **Features** card
 
 ---
 
@@ -45,7 +45,7 @@ Control which features are active in your RewardsPro installation. Feature toggl
 
 | Setting | Default | Description |
 |---------|---------|-------------|
-| **Auto Cashback Processing** | Off | Automatically process cashback when orders are paid |
+| **Automatic Cashback** | Off | Automatically process cashback when orders are paid |
 
 **When enabled:**
 - Cashback issued instantly on order payment
@@ -53,8 +53,8 @@ Control which features are active in your RewardsPro installation. Feature toggl
 - Fastest customer experience
 
 **When disabled:**
-- Orders queued for manual review
-- You approve cashback before it's issued
+- Cashback waits on the **Orders** page
+- You issue it yourself, order by order
 - More control over fraud prevention
 
 **Recommended for:**
@@ -69,30 +69,15 @@ Even with automatic processing, refunded orders automatically reverse cashback.
 
 ### Email Marketing
 
-| Setting | Default | Description |
-|---------|---------|-------------|
-| **Email Marketing Enabled** | Off | Enable email campaign features |
-
-**When enabled:**
-- Send promotional emails to loyalty members
-- Segment customers by tier
-- Track email engagement
-- Schedule campaigns
-
-**When disabled:**
-- Transactional emails only (tier changes, balance updates)
-- No promotional capabilities
-- Reduced email quota usage
-
-**Plan requirement:** Max or Ultra plan for full email features
+Email campaigns and automations aren't sending yet. There's no toggle for them on the **Features** card. Welcome and tier-change emails are separate and send on their own. See [Email Settings](email-settings.md).
 
 ---
 
-### Tier Products
+### Membership Tiers
 
 | Setting | Default | Description |
 |---------|---------|-------------|
-| **Tier Products Enabled** | On | Allow selling tier memberships as products |
+| **Membership Tiers** | On | Allow selling tier memberships as products (tier products) |
 
 **When enabled:**
 - Create products that grant tier access
@@ -118,26 +103,15 @@ Some features depend on others:
 
 | Feature | Requires |
 |---------|----------|
-| Email Marketing | Email Enabled |
 | ROI Analytics | Business Metrics configured |
 | Tier Products | At least one tier created |
 | Auto Cashback | Order sync enabled |
 
 ---
 
-## Plan-Based Features
+## Plans
 
-Certain features are tied to your subscription plan:
-
-| Feature | Starter | Growth | Max | Ultra |
-|---------|---------|--------|-----|-------|
-| Basic Analytics | Yes | Yes | Yes | Yes |
-| Advanced Analytics | - | Yes | Yes | Yes |
-| Manual Cashback | Yes | Yes | Yes | Yes |
-| Auto Cashback | - | Yes | Yes | Yes |
-| Email Notifications | Basic | Basic | Custom | White-label |
-| Tier Products | Yes | Yes | Yes | Yes |
-| Customer Widget | Yes | Yes | Yes | Yes |
+RewardsPro is free, with one plan, Free Forever. These toggles aren't tied to a plan.
 
 ---
 
@@ -149,9 +123,8 @@ Start conservative:
 
 ```
 Advanced Analytics: On
-Auto Cashback: Off (review manually first)
-Email Marketing: Off
-Tier Products: On (if selling memberships)
+Automatic Cashback: Off (review manually first)
+Membership Tiers: On (if selling memberships)
 ```
 
 ### For Established Stores
@@ -160,9 +133,8 @@ Enable automation:
 
 ```
 Advanced Analytics: On
-Auto Cashback: On (trust your customers)
-Email Marketing: On (engage customers)
-Tier Products: On
+Automatic Cashback: On (trust your customers)
+Membership Tiers: On
 ```
 
 ### For High-Volume Stores
@@ -171,9 +143,8 @@ Maximize efficiency:
 
 ```
 Advanced Analytics: On
-Auto Cashback: On (essential for scale)
-Email Marketing: On (segmented campaigns)
-Tier Products: On
+Automatic Cashback: On (essential for scale)
+Membership Tiers: On
 ```
 
 ---
@@ -183,13 +154,11 @@ Tier Products: On
 ### Feature Not Working After Enabling
 
 1. **Refresh the page** - Settings may need reload
-2. **Check plan requirements** - Some features need higher plans
-3. **Verify dependencies** - Check if related features are configured
-4. **Clear browser cache** - Force fresh settings load
+2. **Verify dependencies** - Check if related features are configured
+3. **Clear browser cache** - Force fresh settings load
 
 ### Feature Greyed Out
 
-- Feature may require plan upgrade
 - Dependent setting not configured
 - Contact support if issue persists
 

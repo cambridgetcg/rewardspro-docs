@@ -1,17 +1,28 @@
 ---
 icon: house
-description: RewardsPro existing service and historical feature documentation
+description: Free membership tiers and cashback for Shopify, paid out as Shopify store credit
 ---
 
 # RewardsPro documentation
 
-This repository preserves RewardsPro feature and existing-service documentation.
-New paid sign-ups, trials and upgrades are retired; older feature descriptions
-are not current offers or instructions to grow a business. Existing balances,
-orders, refunds and agreed service obligations remain intact.
+RewardsPro is a free Shopify app. You set up membership tiers, and your customers
+earn cashback on their orders as Shopify store credit. There is one plan, Free
+Forever, and you don't pay for it.
 
-There are no revenue, acquisition, learning or output quotas. See
-[the current billing status](billing/plans.md).
+[Install RewardsPro from the Shopify App Store](https://apps.shopify.com/rewards-pro),
+then follow [Getting Started](getting-started/README.md).
+
+{% hint style="warning" %}
+**Before you install: Shopify's store credit rules**
+
+Cashback reaches your customers as Shopify store credit, so Shopify's rules apply:
+
+- Customers can spend store credit at checkout only when signed in through Shopify customer accounts, or when paying with Shop Pay. Legacy customer accounts can't use store credit.
+- Shopify applies the full store credit balance. A customer can't choose to spend part of it.
+- If your Shopify store was created on or after 12 May 2025, Shopify charges you its third-party transaction fee on the part of an order paid with store credit, even if you use Shopify Payments.
+
+[Installation](getting-started/installation.md) explains each rule.
+{% endhint %}
 
 ## Quick Links
 
@@ -26,7 +37,7 @@ There are no revenue, acquisition, learning or output quotas. See
 <tbody>
 <tr>
 <td><strong>Getting Started</strong></td>
-<td>Historical setup reference</td>
+<td>Install, set up and test</td>
 <td><a href="getting-started/">getting-started</a></td>
 </tr>
 <tr>
@@ -41,7 +52,7 @@ There are no revenue, acquisition, learning or output quotas. See
 </tr>
 <tr>
 <td><strong>Advanced Features</strong></td>
-<td>Tier products, portal & API</td>
+<td>Tier products, widget & integrations</td>
 <td><a href="advanced-features/">advanced-features</a></td>
 </tr>
 </tbody>
@@ -49,28 +60,37 @@ There are no revenue, acquisition, learning or output quotas. See
 
 ---
 
-## Existing installations
-
-Use the relevant feature or support page to understand an existing installation.
-The former acquisition walkthrough is retained in history.
-
 ## What You Can Do
 
 ### Build Customer Loyalty
 
-Create tiered membership programs where customers earn more as they spend more. Set up Bronze, Silver, Gold tiers - or create your own custom structure.
+Create membership tiers where customers earn more as they spend more. Set up Bronze, Silver, Gold tiers, or your own structure.
 
 ### Reward Purchases Automatically
 
-When customers place orders, cashback is calculated and credited automatically based on their tier. No manual work required.
+Turn on **Automatic Cashback** and RewardsPro credits cashback when an order is paid, at the rate of the customer's tier. If an order is refunded, RewardsPro takes back the refunded share of its cashback, up to what the customer still holds.
 
 ### Track Store Credit
 
-All earned rewards are tracked as store credit. Customers can view their balance and redeem at checkout.
+Cashback is issued as Shopify store credit. Customers see their balance in the RewardsPro widget on your storefront and in their Shopify customer account, and spend it at checkout.
 
-### Inspect recorded costs and amounts
+### See How the Program Is Doing
 
-Historical analytics describe recorded amounts and assumptions. They are not growth targets or a requirement to justify this project financially.
+Analytics show your orders and the cashback they earned.
+
+---
+
+## Not Available Yet
+
+Some parts of RewardsPro aren't ready for customers. They are switched off or hidden in the app until they work from start to finish:
+
+| Feature | Status |
+|---------|--------|
+| **Points** | Customers can't spend points or turn them into store credit, so points can't be switched on. Cashback and tiers work today. |
+| **Missions** | Missions aren't live in your storefront. |
+| **Raffles and mystery boxes** | Paused. |
+| **Gift cards** | Not available. |
+| **AI writing assistant for emails** | Not available. |
 
 ---
 
@@ -88,17 +108,17 @@ Historical analytics describe recorded amounts and assumptions. They are not gro
 <tr>
 <td><strong>Creating Tiers</strong></td>
 <td>Set up your first membership tier</td>
-<td><a href="membership-tiers/create.md">membership-tiers/create.md</a></td>
+<td><a href="core-features/membership-tiers/create.md">core-features/membership-tiers/create.md</a></td>
 </tr>
 <tr>
 <td><strong>Cashback Rules</strong></td>
 <td>How cashback is calculated</td>
-<td><a href="orders-and-cashback/cashback-calculation-rules.md">orders-and-cashback/cashback-calculation-rules.md</a></td>
+<td><a href="core-features/orders-and-cashback/cashback-calculation-rules.md">core-features/orders-and-cashback/cashback-calculation-rules.md</a></td>
 </tr>
 <tr>
-<td><strong>Business Metrics</strong></td>
-<td>Understand recorded calculations</td>
-<td><a href="configuration/business-metrics.md">configuration/business-metrics.md</a></td>
+<td><strong>Testing Your Setup</strong></td>
+<td>Place a test order and spend the credit</td>
+<td><a href="getting-started/testing-your-setup.md">getting-started/testing-your-setup.md</a></td>
 </tr>
 <tr>
 <td><strong>Data Sync</strong></td>
@@ -113,6 +133,5 @@ Historical analytics describe recorded amounts and assumptions. They are not gro
 ## Need Help?
 
 - **Browse Documentation** - Use the sidebar or search to find guides
-- **Contact Support** - Email us at support@rewardspro.io
+- **Contact Support** - Email us at contact@rewardspro.io
 - **FAQ** - Check [Resources](resources/) for common questions
-

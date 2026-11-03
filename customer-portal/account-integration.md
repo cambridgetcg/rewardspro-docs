@@ -1,243 +1,55 @@
 ---
-description: Integrate RewardsPro into your customer account pages
+description: What customers see in their Shopify customer account
 ---
 
 # Account Integration
 
-Display loyalty information directly in your customers' account pages for a seamless experience.
+RewardsPro doesn't add a block or extension to customer account pages. Cashback
+is issued as Shopify store credit, and Shopify shows store credit natively in
+customer accounts.
 
-## Account Page Options
+## What Customers See Where
 
-### Shopify Customer Accounts
+| Where | What customers see |
+|-------|--------------------|
+| **Shopify customer account** | Their store credit balance, shown by Shopify |
+| **Checkout** | Their store credit, which they can apply when signed in through customer accounts or paying with Shop Pay |
+| **RewardsPro widget on your storefront** | Their tier, cashback rate, store credit balance and progress to the next tier, once they're signed in |
 
-RewardsPro integrates with both account types:
+## Customer Accounts, Not Legacy Accounts
 
-| Account Type | Integration Method |
-|--------------|-------------------|
-| **Classic Accounts** | Theme block |
-| **New Customer Accounts** | Account UI extension |
+Store credit isn't available with legacy customer accounts. Customers can spend
+their store credit only when signed in through Shopify customer accounts, or
+when paying with Shop Pay.
 
-## Classic Customer Accounts
+To check which your store uses:
 
-### Adding the Loyalty Section
+1. Go to **Shopify Admin** → **Settings** → **Customer accounts**
+2. Make sure customers sign in with customer accounts, not legacy customer accounts
+3. Make sure the **Store credit** setting is turned on there, so customers see their balance in their account
+4. Save changes
 
-1. Go to **Online Store → Themes → Customize**
-2. Navigate to **Customer Account** template
-3. Add **RewardsPro Account Block**
-4. Position in desired location
-5. Save
+See Shopify's [store credit help page](https://help.shopify.com/en/manual/customers/store-credit) for the full rules.
 
-### Available Blocks
+## Spending Store Credit
 
-| Block | Content |
-|-------|---------|
-| **Full Dashboard** | Complete loyalty overview |
-| **Tier Status** | Current tier and progress |
-| **Credit Balance** | Store credit with history |
-| **Rewards Summary** | Compact overview card |
+- Shopify applies the customer's full store credit balance. Customers can't choose a partial amount.
+- Store credit can't pay for draft orders, edited orders or recurring subscription payments.
+- At checkout, customers see only the balance in that checkout's currency.
+- If your store was created on or after 12 May 2025, Shopify charges you its third-party transaction fee on the part of an order paid with store credit, even with Shopify Payments.
 
-### Recommended Layout
+[Installation](../getting-started/installation.md) explains these rules.
 
-```
-┌─────────────────────────────────────┐
-│ Welcome back, {Customer Name}       │
-├─────────────────────────────────────┤
-│ ┌─────────────┐ ┌─────────────────┐ │
-│ │ Tier Status │ │ Store Credit    │ │
-│ │ 🥇 Gold     │ │ Balance: $45.50 │ │
-│ │ ████████░░  │ │ [View History]  │ │
-│ │ 80% to Plat │ │                 │ │
-│ └─────────────┘ └─────────────────┘ │
-├─────────────────────────────────────┤
-│ Recent Orders                       │
-│ ...                                 │
-└─────────────────────────────────────┘
-```
+## Showing Tier and Progress
 
-## New Customer Accounts
+Tier status and progress appear in the RewardsPro widget, not in the customer
+account. Turn on the **RewardsPro Widget** app embed in your theme editor. See
+[Widget Installation](widget-installation.md).
 
-### Account UI Extension
-
-RewardsPro provides a dedicated extension for Shopify's new customer accounts:
-
-**Features:**
-- Native look and feel
-- Full rewards dashboard
-- Transaction history
-- Tier management
-
-### Installation
-
-The extension is automatically available when RewardsPro is installed. To enable:
-
-1. Go to **Settings → Customer accounts** in Shopify admin
-2. Ensure "New customer accounts" is enabled
-3. RewardsPro appears automatically in account pages
-
-### Extension Sections
-
-| Section | Description |
-|---------|-------------|
-| **Profile Block** | Shows in main profile area |
-| **Order Extension** | Adds cashback info to orders |
-| **Full Page** | Dedicated rewards page |
-
-## Displaying Tier Information
-
-### Tier Badge
-
-Show the customer's current tier:
-
-```liquid
-{% if customer %}
-  <div class="loyalty-tier">
-    <span class="tier-badge tier-{{ customer.metafields.rewardspro.tier }}">
-      {{ customer.metafields.rewardspro.tier_name }}
-    </span>
-  </div>
-{% endif %}
-```
-
-### Progress Indicator
-
-Show progress to next tier:
-
-| Element | Data |
-|---------|------|
-| Current spend | `$1,250` |
-| Next tier threshold | `$2,500` |
-| Progress | `50%` |
-| Amount needed | `$1,250 more` |
-
-### Tier Benefits
-
-Display what the current tier offers:
-
-- ✅ 5% cashback on all orders
-- ✅ Early access to sales
-- ✅ Free shipping over $50
-- ✅ Birthday bonus credit
-
-## Store Credit Display
-
-### Balance Card
-
-Prominent display of available credit:
-
-```
-┌─────────────────────────┐
-│ 💰 Store Credit         │
-│                         │
-│    $45.50               │
-│    Available Balance    │
-│                         │
-│ [Use at Checkout]       │
-└─────────────────────────┘
-```
-
-### Transaction History
-
-Show recent credit activity:
-
-| Date | Description | Amount |
-|------|-------------|--------|
-| Nov 25 | Order #1234 cashback | +$7.50 |
-| Nov 20 | Order #1233 cashback | +$12.00 |
-| Nov 18 | Used at checkout | -$25.00 |
-| Nov 15 | Welcome bonus | +$10.00 |
-
-### Filtering Options
-
-Let customers filter transactions:
-- All transactions
-- Credits earned
-- Credits used
-- Date range
-
-## Order History Integration
-
-### Cashback Per Order
-
-Show cashback earned on each order:
-
-```
-Order #1234 - November 25, 2024
-Total: $150.00
-Status: Fulfilled
-───────────────────────
-🎁 Cashback Earned: $7.50 (5%)
-```
-
-### Order Detail Page
-
-On individual order pages, show:
-- Cashback amount earned
-- Tier at time of purchase
-- Credit used (if any)
-
-## Headless / Custom Storefronts
-
-### API Integration
-
-For headless stores, use the API:
-
-```javascript
-// Fetch customer loyalty data
-const response = await fetch('/apps/rewardspro/membership', {
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
-
-const { customer } = await response.json();
-
-// customer.tier - Current tier info
-// customer.storeCredit - Balance and history
-// customer.spending - Progress data
-```
-
-### Required Data
-
-Ensure you pass customer authentication:
-- Shopify customer ID
-- Shop domain
-- HMAC verification
-
-## Testing Integration
-
-### Test Scenarios
+## Testing
 
 | Scenario | Expected Result |
 |----------|-----------------|
-| New customer | Default tier, $0 balance |
-| Active customer | Current tier, real balance |
-| Upgraded customer | New tier badge, updated rate |
-| Guest visitor | Login prompt |
-
-### Debug Mode
-
-Enable debug mode to see:
-- API responses
-- Customer data being fetched
-- Any integration errors
-
-## Best Practices
-
-### Placement
-
-- **Above the fold** - Loyalty status visible without scrolling
-- **Near orders** - Connect rewards to purchase behavior
-- **Consistent location** - Same spot on all account pages
-
-### Performance
-
-- Cache tier data (updates on order)
-- Lazy load transaction history
-- Use skeleton loading states
-
-### Accessibility
-
-- Proper heading hierarchy
-- ARIA labels on interactive elements
-- Color contrast compliance
-- Screen reader friendly
+| Signed-in customer with store credit | Balance shows in their Shopify customer account and in the widget |
+| Same customer at checkout | Store credit is offered, and Shopify applies the full balance |
+| Guest visitor | The widget asks them to sign in |

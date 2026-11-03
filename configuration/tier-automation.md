@@ -168,7 +168,7 @@ When tiers change (automatic or manual), the system:
 
 1. **Logs the change** - Visible in Customer Details → Tier History
 2. **Updates customer record** - New tier applies immediately
-3. **Triggers notifications** - If email notifications are configured (Max+ plans)
+3. **Triggers notifications** - Sends the customer a tier upgrade or downgrade email when the change comes from an order
 
 ### Tier Change Log
 

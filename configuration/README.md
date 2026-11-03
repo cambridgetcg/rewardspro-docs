@@ -40,7 +40,7 @@ Customize RewardsPro to optimize your loyalty program. This section covers all e
 </tr>
 <tr>
 <td><strong>Email Settings</strong></td>
-<td>Branded email notifications (Max & Ultra)</td>
+<td>Sender, sending domain and email branding</td>
 <td><a href="email-settings.md">email-settings.md</a></td>
 </tr>
 <tr>
@@ -63,7 +63,7 @@ Customize RewardsPro to optimize your loyalty program. This section covers all e
 
 4. **Data Sync** - Import historical orders for accurate tier calculations
 5. **Widget Settings** - Customize the customer-facing widget
-6. **Email Settings** - Configure branded emails (Max & Ultra plans)
+6. **Email Settings** - Configure the sender and branding of your emails
 
 ---
 

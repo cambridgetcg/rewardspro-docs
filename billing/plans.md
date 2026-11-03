@@ -1,14 +1,12 @@
 ---
-description: Retired plan offers and existing billing records
+description: RewardsPro's plan and billing
 ---
 
-# New paid plans and upgrades are retired
+# Plans and billing
 
-The former price table, paid trials and upgrade instructions are no longer
-current offers. There is no acquisition, revenue or growth target to satisfy.
+RewardsPro is free. There is one plan, Free Forever, and you don't pay for it.
+There is no paid plan, trial or upgrade to buy right now.
 
-Existing subscriptions, invoices, refunds, balances and support commitments must
-be handled from their actual records and agreed terms. This documentation change
-does not cancel an agreement, charge a customer or erase a financial record.
-
-[Former plan documentation](../docs/history/retired-commercial-direction-2026-09-23/billing__plans.md.txt) is retained as retired history.
+If your store has an earlier paid RewardsPro subscription, it keeps its recorded
+terms. Its records, cancellation, refunds and support remain available. Email
+contact@rewardspro.io with any invoice, cancellation or refund question.

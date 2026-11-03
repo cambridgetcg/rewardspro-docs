@@ -90,7 +90,6 @@ Default: "Rewards"
 
 Customize to match your brand:
 - "My Rewards"
-- "Loyalty Points"
 - "VIP Status"
 - "Member Benefits"
 

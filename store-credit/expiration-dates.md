@@ -1,10 +1,14 @@
 ---
-description: Configure and manage store credit expiration policies
+description: RewardsPro doesn't set expiry dates on store credit today
 ---
 
 # Expiration Dates
 
-You can optionally set expiration dates for store credit. When enabled, credit that isn't used by the expiration date becomes void.
+{% hint style="warning" %}
+**Not in RewardsPro today**: RewardsPro doesn't set an expiry date on the store credit it issues, and its settings have no expiry option. The rest of this page describes a setting that isn't built.
+
+[Yu: keep this page with the notice, or remove it from the docs?]
+{% endhint %}
 
 ## Before Enabling Expiration
 

@@ -6,7 +6,7 @@ description: Understand and support existing recurring tier agreements
 
 A subscription links a customer and tier to a Shopify contract. Read its status,
 price, billing interval, period dates and provider history before acting.
-This guide covers existing agreements; app plan offers are [retired](../billing/plans.md).
+This guide covers existing agreements. RewardsPro itself is free: see [plans and billing](../billing/plans.md).
 
 ## Read the lifecycle
 
@@ -33,4 +33,4 @@ history when provider and local records disagree.
 Related: [tier products](tier-products.md), [webhooks](webhooks.md),
 [membership lifecycle](../tier-products/membership-lifecycle.md).
 
-The former setup, pricing and growth playbook is [retired history](../docs/history/retired-commercial-direction-2026-09-24/advanced-features__tier-subscriptions.md.txt).
+Earlier setup guidance is kept in the [repository history](../docs/history/retired-commercial-direction-2026-09-24/advanced-features__tier-subscriptions.md.txt).

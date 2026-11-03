@@ -412,5 +412,5 @@ For users with JavaScript disabled:
 ## Related Guides
 
 - [Widget Customization](widget-customization.md) - Advanced styling
-- [Customer Account](customer-account.md) - Account page integration
+- [Access Store Credits](../core-features/store-credit/access-store-credits.md) - Store credit in Shopify customer accounts and at checkout
 - [Settings](../configuration/widget-settings.md) - All widget settings

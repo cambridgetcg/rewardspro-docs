@@ -188,8 +188,8 @@ Flag orders for review before processing:
 | **Multiple orders same day** | Off | Detect abuse |
 | **Guest checkout** | Off | Encourage account creation |
 
-{% hint style="info" %}
-Manual review queue is available on Growth and Max plans.
+{% hint style="warning" %}
+These review flags aren't in the app today. With **Automatic Cashback** off, every order's cashback waits on the **Orders** page until you issue it.
 {% endhint %}
 
 ---
