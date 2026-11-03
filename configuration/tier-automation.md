@@ -37,10 +37,10 @@ A toggle to enable or disable the automated system.
 | Setting | Behavior |
 |---------|----------|
 | **Enabled** | Tiers recalculate on schedule automatically |
-| **Disabled** | Tiers only change when manually triggered |
+| **Disabled** | No scheduled recalculation. Tiers still update when an order is paid, and when you recalculate by hand |
 
 {% hint style="info" %}
-When first enabled, an initial recalculation runs within 24 hours.
+When first enabled, the first recalculation runs at the next daily check, at 09:00 UTC.
 {% endhint %}
 
 ---
@@ -49,12 +49,14 @@ When first enabled, an initial recalculation runs within 24 hours.
 
 How often the system evaluates all customers and updates tiers.
 
+RewardsPro checks every day at 09:00 UTC and recalculates on the frequency you choose. The interval counts from when the last recalculation finished, so a recalculation can come a day later than the interval.
+
 | Frequency | When It Runs | Best For |
 |-----------|--------------|----------|
-| **Daily** | Every day at midnight (store timezone) | High-volume stores, real-time tier updates |
-| **Weekly** | Every Sunday at midnight | Most stores (recommended) |
-| **Monthly** | First day of each month | Low-volume stores, stable programs |
-| **Quarterly** | Every 3 months | Minimal tier movement needed |
+| **Daily** | When a day has passed since the last recalculation | High-volume stores, frequent tier updates |
+| **Weekly** | When 7 days have passed | Most stores (recommended) |
+| **Monthly** | When 30 days have passed | Low-volume stores, stable programs |
+| **Quarterly** | When 90 days have passed | Minimal tier movement needed |
 
 ### Choosing the Right Frequency
 
@@ -130,11 +132,12 @@ Shows when the automatic recalculation last completed.
 Calculated based on frequency and last run:
 
 ```
-Next Run = Last Run + Frequency Interval
+Next Run = the first daily check (09:00 UTC) once the frequency interval
+           has passed since the last run finished
 
 Example (Weekly):
-  Last Run: Sunday, Dec 1 at 00:00
-  Next Run: Sunday, Dec 8 at 00:00
+  Last Run finished: 1 December at 09:02 UTC
+  Next Run: 9 December at 09:00 UTC
 ```
 
 ---
@@ -168,7 +171,7 @@ When tiers change (automatic or manual), the system:
 
 1. **Logs the change** - Visible in Customer Details → Tier History
 2. **Updates customer record** - New tier applies immediately
-3. **Triggers notifications** - Sends the customer a tier upgrade or downgrade email when the change comes from an order
+3. **Triggers notifications** - Sends the customer a tier upgrade or downgrade email only when a paid order changes the tier. Refunds, manual changes and scheduled recalculation send no email
 
 ### Tier Change Log
 

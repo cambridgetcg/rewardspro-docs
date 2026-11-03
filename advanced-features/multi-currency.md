@@ -4,7 +4,7 @@ description: Handle multiple currencies in your loyalty program
 
 # Multi-Currency Support
 
-RewardsPro supports 32 currencies with automatic exchange rate management, allowing international stores to operate seamlessly.
+RewardsPro supports 32 store currencies. It works in your store currency: for an order paid in another currency, it uses the amount Shopify records in your store currency.
 
 ---
 
@@ -63,7 +63,7 @@ Your store's base currency is set in Shopify:
 When an order is placed:
 
 1. Order total captured in customer's currency
-2. Converted to base currency for storage
+2. Shopify also records it in your base currency, and RewardsPro stores that amount
 3. Cashback calculated in base currency
 4. Store credit issued in base currency
 
@@ -72,45 +72,14 @@ When an order is placed:
 Customer-facing elements:
 
 1. Widget shows balance in store currency
-2. Checkout applies credit in store currency
+2. At checkout, Shopify shows only the store credit balance in the checkout's currency
 3. Order history shows original currency
 
 ---
 
 ## Exchange Rates
 
-### Automatic Updates
-
-Exchange rates are updated daily:
-
-| Setting | Value |
-|---------|-------|
-| **Provider** | ExchangeRate-API |
-| **Frequency** | Daily at midnight UTC |
-| **Fallback** | Cached rates if API unavailable |
-
-### Exchange Rate Data
-
-| Field | Description |
-|-------|-------------|
-| `baseCurrency` | Source currency (usually USD) |
-| `targetCurrency` | Destination currency |
-| `rate` | Exchange rate |
-| `fetchedAt` | When rate was retrieved |
-| `provider` | Data source |
-
-### Manual Override
-
-To set custom rates:
-
-1. Go to **Settings** > **Currency**
-2. Click **Exchange Rates**
-3. Edit specific rates
-4. Save changes
-
-{% hint style="warning" %}
-Manual rates won't auto-update. Use sparingly.
-{% endhint %}
+RewardsPro doesn't apply exchange rates of its own to cashback, tiers or store credit. For an order paid in another currency, it uses the amount Shopify records in your store currency, converted at Shopify's rate. There are no exchange rate settings in RewardsPro.
 
 ---
 
@@ -149,8 +118,8 @@ Manual rates won't auto-update. Use sparingly.
 
 ```
 Order total: €85.00
-Exchange rate: 1 EUR = 1.08 USD
-Converted total: $91.80 USD
+Shopify's rate: 1 EUR = 1.08 USD
+Shopify's amount in USD: $91.80
 Customer tier: Gold (5% cashback)
 Cashback: $4.59 USD
 ```
@@ -172,26 +141,19 @@ Result: Not yet Gold tier
 
 ### Balance Storage
 
-- Store credit always stored in **base currency**
+- RewardsPro issues store credit in your **base currency**
 - Displayed to customer in **base currency**
-- Applied at checkout in **order currency**
 
 ### Checkout Application
 
-When customer uses store credit:
-
-1. Balance checked (base currency)
-2. Converted to order currency at current rate
-3. Applied to order total
-4. Remaining balance updated
+Shopify shows a customer only the store credit balance that matches the currency of their checkout. A customer checking out in another currency won't see store credit issued in your store currency.
 
 ### Example
 
 ```
 Store credit balance: $50.00 USD
-Order currency: GBP
-Exchange rate: 1 USD = 0.79 GBP
-Available to apply: £39.50 GBP
+Checkout currency: GBP
+Store credit offered at checkout: none
 ```
 
 ---
@@ -240,7 +202,7 @@ When exporting data:
 ### Scenario 3: Non-USD Base Currency
 
 - Base currency: GBP
-- Exchange rates fetched vs GBP
+- Orders in other currencies counted at Shopify's GBP amount
 - All calculations in GBP
 - Display in GBP
 
@@ -260,28 +222,16 @@ When exporting data:
 2. Re-sync shop settings
 3. Clear cache
 
-### Exchange Rate Issues
-
-**Check:**
-1. Rates updating daily
-2. No API errors in logs
-3. Fallback rates available
-
-**Solution:**
-1. Check exchange rate logs
-2. Manually update if needed
-3. Verify API key
-
 ### Credit Balance Mismatch
 
 **Check:**
-1. Conversion rates at time of transaction
-2. Rounding differences
-3. Multiple currency transactions
+1. Rounding differences
+2. Multiple currency transactions
+3. Whether the customer checked out in another currency, where Shopify doesn't show store credit issued in your store currency
 
 **Solution:**
 1. Review ledger entries
-2. Check conversion rates used
+2. Compare with the customer's store credit in Shopify admin
 3. Minor differences may be rounding
 
 ---
@@ -300,16 +250,15 @@ When exporting data:
 - Consider purchasing power parity
 - May need region-specific programs for fairness
 
-### Exchange Rate Awareness
+### Checkout Currency
 
-- Monitor significant currency fluctuations
-- Consider rate locks for promotions
-- Review rates during major conversions
+- Tell international customers which currency their store credit is in
+- Customers who check out in another currency can't spend store credit issued in your store currency
 
 ---
 
 ## Related Guides
 
-- [Settings](../configuration/general-settings.md) - Currency configuration
+- [Store Settings](../configuration/store-settings.md) - Currency configuration
 - [Analytics](../core-features/analytics.md) - Multi-currency reporting
 - [Cashback Rules](../core-features/orders-and-cashback/cashback-calculation-rules.md) - Calculation with currency

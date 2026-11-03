@@ -191,9 +191,9 @@ To uninstall RewardsPro:
 3. Click **Uninstall**
 
 {% hint style="warning" %}
-**Warning**: Uninstalling deletes all of RewardsPro's data for your store straight away, including tiers, customer records, cashback history and settings. This cannot be undone.
+**Warning**: Uninstalling erases your store's records from RewardsPro's database straight away: tiers, customers, orders, cashback history and settings. This cannot be undone. Copies in our database host's daily backups expire within 8 days; see the [privacy policy](https://rewardspro.io/privacy-policy/).
 
-Store credit already issued stays in your customers' Shopify accounts, because Shopify holds it.
+Store credit already issued, and any tier products RewardsPro created, stay in Shopify.
 {% endhint %}
 
 ---

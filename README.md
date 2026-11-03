@@ -6,8 +6,9 @@ description: Free membership tiers and cashback for Shopify, paid out as Shopify
 # RewardsPro documentation
 
 RewardsPro is a free Shopify app. You set up membership tiers, and your customers
-earn cashback on their orders as Shopify store credit. There is one plan, Free
-Forever, and you don't pay for it.
+earn cashback on their orders as Shopify store credit. Its only plan is called
+Free Forever. No paid plan is offered, and nothing is ever charged without your
+approval in Shopify.
 
 [Install RewardsPro from the Shopify App Store](https://apps.shopify.com/rewards-pro),
 then follow [Getting Started](getting-started/README.md).

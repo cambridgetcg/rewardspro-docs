@@ -19,6 +19,4 @@ prove payment or entitlement.
   retain the original transaction and adjustment history.
 
 For recurring agreements, see [tier subscriptions](tier-subscriptions.md).
-RewardsPro itself is free: see [plans and billing](../billing/plans.md).
-
-Earlier product-creation guidance is kept in the [repository history](../docs/history/retired-commercial-direction-2026-09-24/advanced-features__tier-products.md.txt).
+RewardsPro itself is free: see the [price question in Resources](https://docs.rewardspro.io/documentation/resources).

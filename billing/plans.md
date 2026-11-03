@@ -4,9 +4,9 @@ description: RewardsPro's plan and billing
 
 # Plans and billing
 
-RewardsPro is free. There is one plan, Free Forever, and you don't pay for it.
-There is no paid plan, trial or upgrade to buy right now.
+RewardsPro is free. Its only plan is called Free Forever. No paid plan is
+offered, and nothing is ever charged without your approval in Shopify.
 
-If your store has an earlier paid RewardsPro subscription, it keeps its recorded
-terms. Its records, cancellation, refunds and support remain available. Email
-contact@rewardspro.io with any invoice, cancellation or refund question.
+If you were charged for an earlier paid plan, the charge is in your Shopify
+bills. Email contact@rewardspro.io with any invoice, cancellation or refund
+question. Nothing new is charged without your approval in Shopify.

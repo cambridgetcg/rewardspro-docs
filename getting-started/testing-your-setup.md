@@ -112,8 +112,7 @@ Customers spend their cashback at checkout, so test that too. Use the test custo
 | Full balance applied | Shopify applies the full balance. There's no way to choose part of it |
 | Shopify balance | The customer's store credit in Shopify admin went down by the amount used |
 | RewardsPro balance | The customer in RewardsPro shows the same balance as Shopify, and their store credit history has a **Payment** entry |
-
-[Yu: after the dev-store run, say here whether this order earns cashback on the part paid with store credit, or delete this line.]
+| Cashback on this order | Only the part paid by card earns cashback. The part of the order paid with store credit (or a gift card) earns no cashback |
 
 {% hint style="warning" %}
 **Store credit not offered at checkout?** Check that the customer is signed in through customer accounts (not legacy accounts) or paying with Shop Pay, and that the checkout currency matches the currency of their balance.
@@ -192,19 +191,22 @@ RewardsPro takes back refunded cashback only from store credit the customer stil
 
 ## Test 8: Email Notifications
 
-RewardsPro emails your customers on its own when a new customer is added and when their tier changes. See [Email Settings](../configuration/email-settings.md).
+RewardsPro sends some emails to customers on its own. The welcome and tier upgrade emails start once you've saved your email settings. See [Email Settings](../configuration/email-settings.md) for when each email is sent and what it says.
 
 ### What to Check
 
-- [ ] Welcome email sends when a new customer is added
-- [ ] Tier upgrade email sends on promotion
-- [ ] Tier downgrade email sends when a customer moves down a tier
+- [ ] Welcome email arrives when you create a test customer in Shopify
+- [ ] Tier upgrade email arrives when a paid order moves the test customer up a tier
+- [ ] The From name and Reply-To address are the ones you set
+
+The tier downgrade email is sent only when a paid order moves a customer down a tier. Refunds, tier changes you make by hand and scheduled recalculation don't send it.
 
 ### How to Test
 
-1. Use a real email address you can access
-2. Trigger each notification type
-3. Verify emails arrive and look correct
+1. Save your settings on **Marketing** → **Settings** first
+2. Create a test customer in Shopify with a real email address you can access
+3. Place a paid order for that customer that crosses a tier threshold
+4. Verify the emails arrive and look correct
 
 ---
 
@@ -249,14 +251,13 @@ RewardsPro emails your customers on its own when a new customer is added and whe
 ### Wrong Cashback Amount
 
 **Causes:**
-- Discounts not accounted for
+- Part of the order was paid with store credit or a gift card, which earns no cashback
+- The order includes gift cards or tier products, which earn no cashback
 - Wrong tier assigned
-- Shipping/tax inclusion settings
 
 **Solutions:**
-1. Check what's included in cashback calculation
+1. Check what counts, in [Cashback Calculation Rules](../core-features/orders-and-cashback/cashback-calculation-rules.md). Shipping and tax count, because they're part of what the customer paid
 2. Verify customer's tier
-3. Review cashback settings
 
 ### Customer Not Upgrading
 

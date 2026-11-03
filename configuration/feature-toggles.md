@@ -62,7 +62,7 @@ Control which features are active in your RewardsPro installation. Feature toggl
 - **Disable**: New stores, high-value products, or fraud concerns
 
 {% hint style="warning" %}
-Even with automatic processing, refunded orders automatically reverse cashback.
+Whether cashback was issued automatically or by you, a refund takes back its share of the cashback, up to the store credit the customer still holds.
 {% endhint %}
 
 ---
@@ -77,23 +77,9 @@ Email campaigns and automations aren't sending yet. There's no toggle for them o
 
 | Setting | Default | Description |
 |---------|---------|-------------|
-| **Membership Tiers** | On | Allow selling tier memberships as products (tier products) |
+| **Membership Tiers** | On | This switch doesn't change anything in the app today |
 
-**When enabled:**
-- Create products that grant tier access
-- Sell tier upgrades in your store
-- One-time tier purchases available
-
-**When disabled:**
-- Tiers based on spending only
-- No tier product creation
-- Simplified tier management
-
-**Use cases:**
-- **Enable**: Want to sell VIP memberships
-- **Disable**: Prefer spending-based tiers only
-
-See [Tier Products](../advanced-features/tier-products.md) for setup guide.
+Tiers and tier products work whether it's on or off. See [Tier Products](../advanced-features/tier-products.md) for existing tier products.
 
 ---
 
@@ -105,7 +91,6 @@ Some features depend on others:
 |---------|----------|
 | ROI Analytics | Business Metrics configured |
 | Tier Products | At least one tier created |
-| Auto Cashback | Order sync enabled |
 
 ---
 
@@ -124,7 +109,6 @@ Start conservative:
 ```
 Advanced Analytics: On
 Automatic Cashback: Off (review manually first)
-Membership Tiers: On (if selling memberships)
 ```
 
 ### For Established Stores
@@ -134,7 +118,6 @@ Enable automation:
 ```
 Advanced Analytics: On
 Automatic Cashback: On (trust your customers)
-Membership Tiers: On
 ```
 
 ### For High-Volume Stores
@@ -144,7 +127,6 @@ Maximize efficiency:
 ```
 Advanced Analytics: On
 Automatic Cashback: On (essential for scale)
-Membership Tiers: On
 ```
 
 ---

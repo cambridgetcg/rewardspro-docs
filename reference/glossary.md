@@ -72,13 +72,13 @@ The accounting system RewardsPro uses where every store credit transaction has b
 ## E
 
 ### Eligible Amount
-The portion of an order that qualifies for cashback calculation. Typically: subtotal minus discounts, excluding shipping, tax, and excluded products.
+The portion of an order that qualifies for cashback calculation: what the customer paid, including shipping and tax, minus any part paid with store credit or gift cards, and minus gift card and tier products in the order.
 
 ### Evaluation Period
 The timeframe used to calculate customer spending for tier qualification. Values: ANNUAL (rolling 12 months) or LIFETIME (all-time).
 
 ### Exchange Rate
-The conversion rate between currencies, updated daily from exchange rate providers. Used when orders are placed in currencies different from the store's base currency.
+The conversion rate between currencies. For an order paid in another currency, RewardsPro uses the amount Shopify records in the store's base currency, so it doesn't apply exchange rates of its own.
 
 ---
 

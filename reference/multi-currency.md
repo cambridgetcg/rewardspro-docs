@@ -4,7 +4,7 @@ description: Multi-currency support in RewardsPro
 
 # Multi-Currency Support
 
-RewardsPro supports 32 currencies for global stores, with automatic exchange rate management.
+RewardsPro supports 32 store currencies. It works in your store currency: for an order paid in another currency, it uses the amount Shopify records in your store currency.
 
 ---
 
@@ -74,9 +74,13 @@ Your primary currency set in Shopify, used for:
 
 For multi-currency Shopify stores:
 - Orders captured in customer's local currency
-- Converted to store currency for storage
+- Shopify also records each order in your store currency, and RewardsPro stores that amount
 - Cashback calculated in store currency
 - Credit balance always in store currency
+
+### Store Credit at Checkout
+
+Shopify shows a customer only the store credit balance that matches the currency of their checkout. A customer checking out in another currency won't see store credit issued in your store currency.
 
 ---
 
@@ -84,27 +88,14 @@ For multi-currency Shopify stores:
 
 ### Rate Source
 
-RewardsPro uses ExchangeRate-API for reliable rates:
-- Updated every 24 hours (midnight UTC)
-- Accurate to 4 decimal places
-- Historical rates preserved for audit
-
-### Rate Storage
-
-| Field | Description |
-|-------|-------------|
-| `baseCurrency` | Source currency (usually USD) |
-| `targetCurrency` | Destination currency |
-| `rate` | Exchange rate |
-| `fetchedAt` | When rate was retrieved |
-| `provider` | Data source |
+RewardsPro doesn't apply exchange rates of its own to cashback, tiers or store credit. It uses the store-currency amount Shopify records for each order, converted at Shopify's rate.
 
 ### Conversion Example
 
 ```
 Order: €100.00 EUR
-Exchange rate: 1 EUR = 1.08 USD
-Converted: $108.00 USD
+Shopify's rate: 1 EUR = 1.08 USD
+Shopify's amount in USD: $108.00
 
 Customer tier: Gold (5%)
 Cashback: $5.40 USD (in store currency)
@@ -182,11 +173,10 @@ Consider purchasing power parity:
 - Be clear about which currency balances are in
 - Explain conversion when customers ask
 
-### Exchange Rate Awareness
+### Checkout Currency
 
-- Monitor significant currency fluctuations
-- Rates update daily - large swings may affect tier status
-- Consider rate locks for major promotions
+- Tell international customers which currency their store credit is in
+- Customers who check out in another currency can't spend store credit issued in your store currency
 
 ---
 
@@ -199,15 +189,9 @@ Consider purchasing power parity:
 3. Clear browser cache
 4. Check widget configuration
 
-### Exchange Rate Issues
-
-1. Rates update at midnight UTC
-2. Check for API errors in logs
-3. Manual rate override available if needed
-
 ### Balance Mismatch
 
-1. Review conversion rates at time of transaction
+1. Check whether the customer checked out in another currency
 2. Check for rounding differences
 3. Minor discrepancies may be rounding
 
